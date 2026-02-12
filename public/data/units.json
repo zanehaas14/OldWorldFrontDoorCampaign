@@ -1,0 +1,3546 @@
+{
+  "eonir": [
+    {
+      "id": "parliament_guard",
+      "name": "Parliament Guard",
+      "category": "Special",
+      "ptsPerModel": 60,
+      "minSize": 3,
+      "maxSize": 9,
+      "troopType": "Monstrous Cavalry",
+      "base": "50x50mm",
+      "isCustom": true,
+      "profiles": [
+        {
+          "name": "Parliament Guard",
+          "M": 5,
+          "WS": 6,
+          "BS": 4,
+          "S": 3,
+          "T": 4,
+          "W": 3,
+          "I": 6,
+          "A": 2,
+          "Ld": 9
+        },
+        {
+          "name": "Mist-Hawk",
+          "M": 8,
+          "WS": 4,
+          "BS": "-",
+          "S": 4,
+          "T": "(+1)",
+          "W": "(+2)",
+          "I": 4,
+          "A": 3,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [
+        "Mooncleaver Falchion (S+2, AP-1, Cleaving Blow, Two Hands)",
+        "Wicked Claws (S4, AP-1, Armour Bane 1)",
+        "5+ Ward Save (No Armour)"
+      ],
+      "specialRules": [
+        "Fly (8\"), Swiftstride, Close Order, Fear",
+        "Shrouded in Mist: Natural 6s To Hit must be re-rolled",
+        "Furious Charge: +1A on charge",
+        "Stances – Heavenly Headsmen: Killing Blow OR Harvesters of Fear: Ld test at -1, +1A on fail"
+      ],
+      "notes": "Anti-Cavalry Assassin. High WS/I strike before Knights."
+    },
+    {
+      "id": "ironbark_sentinels",
+      "name": "Ironbark Sentinels",
+      "category": "Special",
+      "ptsPerModel": 60,
+      "minSize": 3,
+      "maxSize": 9,
+      "troopType": "Monstrous Infantry",
+      "base": "50x50mm",
+      "isCustom": true,
+      "profiles": [
+        {
+          "name": "Sentinel",
+          "M": 5,
+          "WS": 4,
+          "BS": 4,
+          "S": 4,
+          "T": 5,
+          "W": 3,
+          "I": 4,
+          "A": 3,
+          "Ld": 8
+        },
+        {
+          "name": "Huntmaster",
+          "M": 5,
+          "WS": 4,
+          "BS": 5,
+          "S": 4,
+          "T": 5,
+          "W": 3,
+          "I": 4,
+          "A": 4,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Iron-Hard Bark (5+ Armour Save)",
+        "Massive Limbs (Hand Weapon)",
+        "Kurnous Greatbow (32\", S6, AP-2, Quick Shot, Multiple Wounds 2, Bramble-Barbs)"
+      ],
+      "specialRules": [
+        "Tree Spirit: Regen 5+, Flammable, Immune to Psychology, Move Through Cover",
+        "Close Order, Fear, Stubborn",
+        "Bramble-Barbs: Behemoth/Monster/Monstrous taking wounds get -1M permanently (min 1)"
+      ],
+      "notes": "Zone Control. Snipe Monsters with S6 AP-2 and slow them."
+    },
+    {
+      "id": "knights_savage_drake",
+      "name": "Knights of the Savage Drake",
+      "category": "Rare",
+      "ptsPerModel": 68,
+      "minSize": 3,
+      "maxSize": 6,
+      "troopType": "Monstrous Cavalry",
+      "base": "50x75mm",
+      "isCustom": true,
+      "profiles": [
+        {
+          "name": "Savage Knight",
+          "M": "-",
+          "WS": 5,
+          "BS": 4,
+          "S": 4,
+          "T": 4,
+          "W": 1,
+          "I": 5,
+          "A": 2,
+          "Ld": 9
+        },
+        {
+          "name": "Predatory Drake",
+          "M": 7,
+          "WS": 4,
+          "BS": "-",
+          "S": 5,
+          "T": "(+0)",
+          "W": "(+3)",
+          "I": 3,
+          "A": 3,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [
+        "Lance (S+2, AP-2 on Charge)",
+        "Heavy Armour, Shield, Drake Scales",
+        "3+ Armour Save (Hard Cap)"
+      ],
+      "specialRules": [
+        "0-1 Per Army. Gareth must join and cannot leave.",
+        "Close Order, Fear, Swiftstride, Move Through Cover, Stubborn",
+        "Furious Charge: +1A on charge",
+        "Predatory Hatred: Hatred (Characters & Monsters)",
+        "Anath Raema's Red Blessing: If unit causes unsaved wounds, ALL models gain +1A for rest of combat"
+      ],
+      "notes": "Anvil & Hammer. High Wounds (4 combined) and escalating attacks via Red Blessing.",
+      "restrictions": [
+        "0-1 per army",
+        "Gareth must be joined"
+      ]
+    },
+    {
+      "id": "gareth",
+      "name": "Gareth (Glade Lord on Great Stag)",
+      "category": "Lords",
+      "ptsCost": 0,
+      "isCharacter": true,
+      "isCustom": true,
+      "profiles": [
+        {
+          "name": "Gareth",
+          "M": "-",
+          "WS": 7,
+          "BS": 6,
+          "S": 4,
+          "T": 3,
+          "W": 3,
+          "I": 8,
+          "A": 4,
+          "Ld": 10
+        }
+      ],
+      "equipment": [],
+      "specialRules": [
+        "General"
+      ],
+      "relic": {
+        "name": "Black Plates of Ilmennath",
+        "type": "Armour",
+        "basicForm": "Heavy Armour. Starts 6+ Regen, improves as Gareth causes wounds, up to 4+. At 4+: Empowered State – Daemonic Vessel bound spell (PL3, 2D6+3): +1S, +1A, +1AP to self/mount/unit",
+        "upgradedForm": "All basic form rules. Broken Morale Aura: enemies within X\" cannot use General's Inspiring Presence"
+      },
+      "notes": "Must join Knights of the Savage Drake."
+    },
+    {
+      "id": "daedilae",
+      "name": "Daedilae",
+      "category": "Lords",
+      "ptsCost": 190,
+      "isCharacter": true,
+      "isCustom": true,
+      "profiles": [
+        {
+          "name": "Daedilae",
+          "M": 5,
+          "WS": 8,
+          "BS": 6,
+          "S": 4,
+          "T": 4,
+          "W": 4,
+          "I": 9,
+          "A": 4,
+          "Ld": 9
+        }
+      ],
+      "equipment": [],
+      "specialRules": [
+        "Level 2 Wizard",
+        "Grim Choreography",
+        "Shrouded in Mist"
+      ],
+      "relic": {
+        "name": "Fëalana (Willbreaker)",
+        "type": "Weapon",
+        "basicForm": "Har Ganeth Greatsword (S+2, AP-1, Cleaving Blow, Two Hands). Punishing Riposte: enemy natural 1 to hit → Daedilae makes 1 attack back (max 1/phase). Aura of Broken Will: enemy wizards within 9\" suffer -1 to casting.",
+        "upgradedForm": "Riposte unlimited per phase. Aura range increased to 18\"."
+      },
+      "notes": "Frontline duelist and magic disruption."
+    },
+    {
+      "id": "treeman_ancient_1",
+      "name": "Treeman Ancient #1",
+      "category": "Lords",
+      "ptsCost": 0,
+      "isCharacter": true,
+      "isCustom": true,
+      "profiles": [],
+      "equipment": [],
+      "specialRules": [],
+      "relic": {
+        "name": "TBD",
+        "type": "Arcane Item",
+        "basicForm": "TBD",
+        "upgradedForm": "TBD"
+      }
+    },
+    {
+      "id": "treeman_ancient_2",
+      "name": "Treeman Ancient #2",
+      "category": "Lords",
+      "ptsCost": 0,
+      "isCharacter": true,
+      "isCustom": true,
+      "profiles": [],
+      "equipment": [],
+      "specialRules": [],
+      "relic": {
+        "name": "TBD",
+        "type": "TBD",
+        "basicForm": "TBD",
+        "upgradedForm": "TBD"
+      }
+    },
+    {
+      "id": "rephal",
+      "name": "Rephal (Khainite Assassin)",
+      "category": "Heroes",
+      "ptsCost": 0,
+      "isCharacter": true,
+      "isCustom": true,
+      "profiles": [],
+      "equipment": [],
+      "specialRules": [],
+      "relic": {
+        "name": "TBD",
+        "type": "Talisman",
+        "basicForm": "TBD",
+        "upgradedForm": "TBD"
+      }
+    },
+    {
+      "id": "caerwynne",
+      "name": "Caerwynne (Shadow Dancer)",
+      "category": "Heroes",
+      "ptsCost": 0,
+      "isCharacter": true,
+      "isCustom": true,
+      "profiles": [],
+      "equipment": [],
+      "specialRules": [],
+      "relic": {
+        "name": "TBD",
+        "type": "Enchanted Item",
+        "basicForm": "TBD",
+        "upgradedForm": "TBD"
+      }
+    },
+    {
+      "id": "we_glade_lord",
+      "name": "Glade Lord",
+      "category": "Characters",
+      "ptsCost": 135,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (character)",
+      "profiles": [
+        {
+          "name": "Glade Lord",
+          "M": 5,
+          "WS": 7,
+          "BS": 7,
+          "S": 4,
+          "T": 3,
+          "W": 3,
+          "I": 6,
+          "A": 4,
+          "Ld": 10
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Light Armour",
+        "Asrai Longbow (R32\", S:User, AP-, Armour Bane 1, Volley Fire)"
+      ],
+      "specialRules": [
+        "Elven Reflexes (+1I first round)",
+        "Talismanic Tattoos (6+ Ward)",
+        "Woodland Ambush"
+      ],
+      "notes": "Mount: Elven Steed, Great Stag, Warhawk, Great Eagle, Forest Dragon. Kindred, Magic Items (100pts), Enchanted Arrows, Forest Sprites."
+    },
+    {
+      "id": "we_glade_captain",
+      "name": "Glade Captain",
+      "category": "Characters",
+      "ptsCost": 70,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (character)",
+      "profiles": [
+        {
+          "name": "Glade Captain",
+          "M": 5,
+          "WS": 6,
+          "BS": 6,
+          "S": 4,
+          "T": 3,
+          "W": 2,
+          "I": 5,
+          "A": 3,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Light Armour",
+        "Asrai Longbow"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Woodland Ambush"
+      ],
+      "notes": "Mount: Elven Steed, Great Stag, Warhawk, Great Eagle. May be BSB. Magic Items (50pts)."
+    },
+    {
+      "id": "we_spellweaver",
+      "name": "Spellweaver",
+      "category": "Characters",
+      "ptsCost": 155,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (character)",
+      "profiles": [
+        {
+          "name": "Spellweaver",
+          "M": 5,
+          "WS": 4,
+          "BS": 4,
+          "S": 3,
+          "T": 3,
+          "W": 3,
+          "I": 4,
+          "A": 2,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Wizard Level 3 (+35pts for Lvl 4)"
+      ],
+      "notes": "Lores: Battle Magic, Elementalism, Illusion, Lore of the Wilds. Mount: Elven Steed, Warhawk, Great Eagle, Unicorn. Magic Items (100pts)."
+    },
+    {
+      "id": "we_spellsinger",
+      "name": "Spellsinger",
+      "category": "Characters",
+      "ptsCost": 80,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (character)",
+      "profiles": [
+        {
+          "name": "Spellsinger",
+          "M": 5,
+          "WS": 4,
+          "BS": 4,
+          "S": 3,
+          "T": 3,
+          "W": 2,
+          "I": 4,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Wizard Level 1 (+35pts for Lvl 2)"
+      ],
+      "notes": "Lores: Battle Magic, Elementalism, Illusion, Lore of the Wilds. Mount: Elven Steed, Warhawk, Great Eagle, Unicorn. Magic Items (50pts)."
+    },
+    {
+      "id": "we_shadowdancer",
+      "name": "Shadowdancer",
+      "category": "Characters",
+      "ptsCost": 85,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (character)",
+      "base": "25x25",
+      "profiles": [
+        {
+          "name": "Shadowdancer",
+          "M": 5,
+          "WS": 8,
+          "BS": 6,
+          "S": 4,
+          "T": 3,
+          "W": 2,
+          "I": 7,
+          "A": 3,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon"
+      ],
+      "specialRules": [
+        "Evasive",
+        "Furious Charge",
+        "Move Through Cover",
+        "Immune to Psychology",
+        "Loner",
+        "Strike First",
+        "Talismanic Tattoos (6+ Ward)",
+        "Troubadour of Loec"
+      ],
+      "notes": "Optional Wizard Lvl 1. Lores: Battle Magic, Illusion, Lore of the Wilds. Magic Items (50pts). Dances of Loec when joined to Wardancers."
+    },
+    {
+      "id": "we_waystalker",
+      "name": "Waystalker",
+      "category": "Characters",
+      "ptsCost": 85,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (character)",
+      "profiles": [
+        {
+          "name": "Waystalker",
+          "M": 5,
+          "WS": 6,
+          "BS": 7,
+          "S": 4,
+          "T": 3,
+          "W": 2,
+          "I": 5,
+          "A": 2,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Asrai Longbow"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Hawk-eyed Archer",
+        "Scouts",
+        "Sniper"
+      ],
+      "notes": "May take: AHW, Light Armour. Magic Items (50pts). Enchanted Arrows, Forest Sprites."
+    },
+    {
+      "id": "we_branchwraith",
+      "name": "Branchwraith",
+      "category": "Characters",
+      "ptsCost": 80,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (character)",
+      "profiles": [
+        {
+          "name": "Branchwraith",
+          "M": 5,
+          "WS": 6,
+          "BS": 6,
+          "S": 4,
+          "T": 4,
+          "W": 2,
+          "I": 6,
+          "A": 2,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Light Armour"
+      ],
+      "specialRules": [
+        "Tree Spirit",
+        "Flammable",
+        "Magical Attacks",
+        "Wizard Lvl 1 (+35pts for Lvl 2)"
+      ],
+      "notes": "Lores: Battle Magic, Elementalism, Illusion, Lore of the Wilds. Magic Items (50pts)."
+    },
+    {
+      "id": "we_treeman_ancient",
+      "name": "Treeman Ancient",
+      "category": "Characters",
+      "ptsCost": 265,
+      "isCharacter": true,
+      "troopType": "Behemoth (character)",
+      "profiles": [
+        {
+          "name": "Treeman Ancient",
+          "M": 5,
+          "WS": 5,
+          "BS": 5,
+          "S": 5,
+          "T": 6,
+          "W": 6,
+          "I": 2,
+          "A": 3,
+          "Ld": 10
+        }
+      ],
+      "equipment": [
+        "Oaken Fists (AP-2)",
+        "Full Plate Armour",
+        "Strangleroots (R12\", Multiple Shots D6+1)"
+      ],
+      "specialRules": [
+        "Tree Spirit",
+        "Tree Whack",
+        "Flammable",
+        "Magical Attacks",
+        "Large Target",
+        "Terror",
+        "Stubborn",
+        "Wizard Lvl 2 (+35/+70 for 3/4)"
+      ],
+      "notes": "Lores: Battle Magic, Elementalism, Lore of the Wilds. Magic Items (100pts)."
+    },
+    {
+      "id": "we_wardens_of_talsyn",
+      "name": "Wardens of Talsyn",
+      "category": "Characters",
+      "ptsCost": 125,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (character)",
+      "profiles": [
+        {
+          "name": "Wardens of Talsyn",
+          "M": 5,
+          "WS": 7,
+          "BS": 4,
+          "S": 4,
+          "T": 3,
+          "W": 3,
+          "I": 6,
+          "A": 4,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Light Armour"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Martial Prowess",
+        "Courage Beyond Compare"
+      ],
+      "notes": "Hosts of Talsyn. May be BSB. Magic Items (50pts)."
+    },
+    {
+      "id": "we_orion",
+      "name": "Orion, the King in the Woods",
+      "category": "Characters",
+      "ptsCost": 455,
+      "isCharacter": true,
+      "troopType": "Monstrous Infantry (named)",
+      "profiles": [
+        {
+          "name": "Orion",
+          "M": 9,
+          "WS": 8,
+          "BS": 6,
+          "S": 5,
+          "T": 5,
+          "W": 5,
+          "I": 8,
+          "A": 5,
+          "Ld": 10
+        },
+        {
+          "name": "Hound of Orion",
+          "M": 9,
+          "WS": 4,
+          "BS": 0,
+          "S": 4,
+          "T": 4,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 6
+        }
+      ],
+      "equipment": [
+        "Spear of Loec (S+1, AP-1, AB2, Killing Blow)",
+        "The Arrow of Kurnous",
+        "Crown of Antlers"
+      ],
+      "specialRules": [
+        "Frenzy",
+        "Large Target",
+        "Terror",
+        "Stubborn",
+        "Immune to Psychology",
+        "Spectral Hounds"
+      ],
+      "notes": "Named. 0-1 per army. 2D6 Hounds of Orion."
+    },
+    {
+      "id": "we_araloth",
+      "name": "Araloth, Lord of Talsyn",
+      "category": "Characters",
+      "ptsCost": 150,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (named)",
+      "profiles": [
+        {
+          "name": "Araloth",
+          "M": 5,
+          "WS": 8,
+          "BS": 7,
+          "S": 4,
+          "T": 3,
+          "W": 3,
+          "I": 8,
+          "A": 4,
+          "Ld": 10
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Heavy Armour",
+        "Shield"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Boldest of the Bold",
+        "Favour of the Goddess (5+ Ward)",
+        "Skaryn the Eye Thief"
+      ],
+      "notes": "Named. Hosts of Talsyn. Counts as Glade Lord."
+    },
+    {
+      "id": "de_khainite_assassin",
+      "name": "Khainite Assassin (Rephal)",
+      "category": "Characters",
+      "ptsCost": 80,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (character)",
+      "profiles": [
+        {
+          "name": "Khainite Assassin",
+          "M": 5,
+          "WS": 8,
+          "BS": 7,
+          "S": 4,
+          "T": 3,
+          "W": 2,
+          "I": 7,
+          "A": 3,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Two Hand Weapons (+1A)"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Hidden (deploys in friendly unit)",
+        "Killing Blow",
+        "Scouts",
+        "Skirmishers"
+      ],
+      "notes": "Dark Elf datasheet for Rephal. Magic Items (50pts). Options: Repeater Xbows +3, AHW +3, Light Armour +5, Cloak of Twilight +15, Dark Venom +15."
+    },
+    {
+      "id": "we_glade_guard",
+      "name": "Glade Guard",
+      "category": "Core",
+      "ptsPerModel": 10,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Regular Infantry",
+      "profiles": [
+        {
+          "name": "Glade Guard",
+          "M": 5,
+          "WS": 4,
+          "BS": 4,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Asrai Longbow (R32\", AB1, Volley Fire)"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Lord's Bowman",
+          "pts": 6,
+          "type": "command",
+          "note": "BS5"
+        },
+        {
+          "id": "std",
+          "name": "Standard Bearer",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "mus",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "fire_flee",
+          "name": "Fire & Flee",
+          "pts": 0,
+          "type": "special",
+          "note": "1/army"
+        },
+        {
+          "id": "vanguard",
+          "name": "Vanguard",
+          "pts": 0,
+          "type": "special",
+          "note": "1/army"
+        }
+      ],
+      "notes": "Enchanted Arrows."
+    },
+    {
+      "id": "we_eternal_guard",
+      "name": "Eternal Guard",
+      "category": "Core",
+      "ptsPerModel": 12,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Regular Infantry",
+      "profiles": [
+        {
+          "name": "Eternal Guard",
+          "M": 5,
+          "WS": 5,
+          "BS": 4,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Asrai Spear (AP-1, Fight in Extra Rank)",
+        "Light Armour",
+        "Shield"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Martial Prowess",
+        "Parry"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Eternal Warden",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "std",
+          "name": "Standard Bearer",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "mus",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "we_dryads",
+      "name": "Dryads",
+      "category": "Core",
+      "ptsPerModel": 13,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Regular Infantry",
+      "profiles": [
+        {
+          "name": "Dryads",
+          "M": 6,
+          "WS": 4,
+          "BS": 4,
+          "S": 3,
+          "T": 4,
+          "W": 1,
+          "I": 4,
+          "A": 2,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Light Armour"
+      ],
+      "specialRules": [
+        "Tree Spirit",
+        "Flammable",
+        "Magical Attacks",
+        "Skirmishers"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Branch Nymph",
+          "pts": 6,
+          "type": "command"
+        }
+      ],
+      "notes": "Forest Sprites."
+    },
+    {
+      "id": "we_glade_riders",
+      "name": "Glade Riders",
+      "category": "Core",
+      "ptsPerModel": 17,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Light Cavalry",
+      "profiles": [
+        {
+          "name": "Glade Rider",
+          "M": "-",
+          "WS": 4,
+          "BS": 4,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 8
+        },
+        {
+          "name": "Elven Steed",
+          "M": 9,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 4,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Asrai Longbow",
+        "Cavalry Spear",
+        "Elven Steed"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Fast Cavalry"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Glade Knight",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "std",
+          "name": "Standard Bearer",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "mus",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "spirit_kurnous",
+          "name": "Spirit of Kurnous",
+          "pts": 0,
+          "type": "special"
+        }
+      ],
+      "notes": "Enchanted Arrows."
+    },
+    {
+      "id": "we_deepwood_scouts",
+      "name": "Deepwood Scouts",
+      "category": "Core",
+      "ptsPerModel": 13,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Regular Infantry",
+      "profiles": [
+        {
+          "name": "Deepwood Scout",
+          "M": 5,
+          "WS": 4,
+          "BS": 4,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Asrai Longbow (R32\", AB1, Volley Fire)"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Scouts",
+        "Skirmishers"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Shadow Sentinel",
+          "pts": 6,
+          "type": "command"
+        }
+      ],
+      "notes": "Enchanted Arrows. Available as Core or Special."
+    },
+    {
+      "id": "we_wildwood_rangers",
+      "name": "Wildwood Rangers",
+      "category": "Special",
+      "ptsPerModel": 14,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Regular Infantry",
+      "profiles": [
+        {
+          "name": "Wildwood Ranger",
+          "M": 5,
+          "WS": 5,
+          "BS": 4,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Light Armour",
+        "Ranger's Glaive (S+2, AP-2, Two Hands)"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Guardians of the Wildwood (+1A & MW2 vs Fear/Terror)"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Wildwood Warden",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "std",
+          "name": "Standard Bearer",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "mus",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "swap_shield",
+          "name": "Swap Glaive for Shield",
+          "pts": 0,
+          "type": "equipment"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "we_wardancers",
+      "name": "Wardancers",
+      "category": "Special",
+      "ptsPerModel": 16,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Regular Infantry",
+      "profiles": [
+        {
+          "name": "Wardancer",
+          "M": 5,
+          "WS": 6,
+          "BS": 4,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 6,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "AHW or Throwing Spear"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Dances of Loec",
+        "Beguiling Aura",
+        "Immune to Psychology",
+        "Skirmishers"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Bladesinger",
+          "pts": 6,
+          "type": "command"
+        }
+      ],
+      "notes": "Shadow Dances of Loec (choose each round). Forest Sprites."
+    },
+    {
+      "id": "we_tree_kin",
+      "name": "Tree Kin",
+      "category": "Special",
+      "ptsPerModel": 51,
+      "minSize": 2,
+      "maxSize": 99,
+      "troopType": "Monstrous Infantry",
+      "profiles": [
+        {
+          "name": "Tree Kin",
+          "M": 5,
+          "WS": 4,
+          "BS": 4,
+          "S": 4,
+          "T": 5,
+          "W": 3,
+          "I": 3,
+          "A": 3,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Heavy Armour",
+        "Oaken Fists (AP-2)"
+      ],
+      "specialRules": [
+        "Tree Spirit",
+        "Flammable",
+        "Magical Attacks",
+        "Tree Whack",
+        "Stubborn"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Tree Kin Elder",
+          "pts": 6,
+          "type": "command"
+        }
+      ],
+      "notes": "Forest Sprites."
+    },
+    {
+      "id": "we_wild_riders",
+      "name": "Wild Riders",
+      "category": "Special",
+      "ptsPerModel": 26,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Light Cavalry",
+      "profiles": [
+        {
+          "name": "Wild Rider",
+          "M": "-",
+          "WS": 5,
+          "BS": 4,
+          "S": 4,
+          "T": 3,
+          "W": 1,
+          "I": 5,
+          "A": 1,
+          "Ld": 9
+        },
+        {
+          "name": "Steed of Kurnous",
+          "M": 9,
+          "WS": 3,
+          "BS": "-",
+          "S": 4,
+          "T": "-",
+          "W": "-",
+          "I": 4,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Hunting Spear (S+1, AP-2, AB1, charge only)",
+        "Light Armour",
+        "Steed of Kurnous"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Fast Cavalry",
+        "Frenzy",
+        "Devastating Charge"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Wild Hunter",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "std",
+          "name": "Standard Bearer",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "mus",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "shields",
+          "name": "Shields",
+          "pts": 0,
+          "type": "equipment"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "we_sisters_of_the_thorn",
+      "name": "Sisters Of The Thorn",
+      "category": "Special",
+      "ptsPerModel": 22,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Light Cavalry",
+      "profiles": [
+        {
+          "name": "Sister of the Thorn",
+          "M": "-",
+          "WS": 4,
+          "BS": 5,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 9
+        },
+        {
+          "name": "Steed of Isha",
+          "M": 8,
+          "WS": 3,
+          "BS": "-",
+          "S": 4,
+          "T": "-",
+          "W": "-",
+          "I": 4,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Blackbriar Javelins (R12\", AP-1, M&S)",
+        "Steed of Isha"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Daughters of Eternity (4+ Ward)",
+        "Deepwood Covern (1 random spell)",
+        "Fast Cavalry",
+        "Poisoned Attacks"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Handmaiden",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "std",
+          "name": "Standard Bearer",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "mus",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "we_warhawk_riders",
+      "name": "Warhawk Riders",
+      "category": "Special",
+      "ptsPerModel": 44,
+      "minSize": 3,
+      "maxSize": 99,
+      "troopType": "Monstrous Cavalry",
+      "profiles": [
+        {
+          "name": "Warhawk Rider",
+          "M": "-",
+          "WS": 4,
+          "BS": 4,
+          "S": 3,
+          "T": 4,
+          "W": 2,
+          "I": 4,
+          "A": 1,
+          "Ld": 8
+        },
+        {
+          "name": "Warhawk",
+          "M": 2,
+          "WS": 3,
+          "BS": "-",
+          "S": 4,
+          "T": "-",
+          "W": "-",
+          "I": 4,
+          "A": 2,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Asrai Longbow",
+        "Cavalry Spear",
+        "Warhawk"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Fly (2)",
+        "Killing Blow (on charge)"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Wind Rider",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "spirit_kurnous",
+          "name": "Spirit of Kurnous",
+          "pts": 0,
+          "type": "special"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "we_guardians_of_talsyn",
+      "name": "Guardians of Talsyn",
+      "category": "Special",
+      "ptsPerModel": 18,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Regular Infantry",
+      "profiles": [
+        {
+          "name": "Guardian of Talsyn",
+          "M": 5,
+          "WS": 5,
+          "BS": 4,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 4,
+          "A": 2,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Asrai Spear",
+        "Light Armour",
+        "Shield"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Martial Prowess"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Guardian Sentinel",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "std",
+          "name": "Standard Bearer",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "mus",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        }
+      ],
+      "notes": "Hosts of Talsyn."
+    },
+    {
+      "id": "we_waywatchers",
+      "name": "Waywatchers",
+      "category": "Rare",
+      "ptsPerModel": 16,
+      "minSize": 5,
+      "maxSize": 99,
+      "troopType": "Regular Infantry",
+      "profiles": [
+        {
+          "name": "Waywatcher",
+          "M": 5,
+          "WS": 4,
+          "BS": 5,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 5,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Asrai Longbow (R32\", AB1, Volley Fire)"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Talismanic Tattoos (6+ Ward)",
+        "Scouts",
+        "Skirmishers",
+        "Sniper",
+        "Multiple Shots (2)"
+      ],
+      "upgrades": [
+        {
+          "id": "champ",
+          "name": "Shadow Sentinel",
+          "pts": 6,
+          "type": "command"
+        }
+      ],
+      "notes": "Enchanted Arrows."
+    },
+    {
+      "id": "we_treeman",
+      "name": "Treeman",
+      "category": "Rare",
+      "ptsPerModel": 215,
+      "minSize": 1,
+      "maxSize": 99,
+      "troopType": "Behemoth",
+      "profiles": [
+        {
+          "name": "Treeman",
+          "M": 5,
+          "WS": 6,
+          "BS": 4,
+          "S": 5,
+          "T": 6,
+          "W": 5,
+          "I": 2,
+          "A": 5,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Oaken Fists (AP-2)",
+        "Full Plate Armour",
+        "Strangleroots (R12\", AP-1, Multi D6+1)"
+      ],
+      "specialRules": [
+        "Tree Spirit",
+        "Tree Whack",
+        "Flammable",
+        "Magical Attacks",
+        "Large Target",
+        "Terror",
+        "Stubborn"
+      ],
+      "notes": "Forest Sprites."
+    },
+    {
+      "id": "we_great_eagle",
+      "name": "Great Eagle",
+      "category": "Rare",
+      "ptsPerModel": 60,
+      "minSize": 1,
+      "maxSize": 99,
+      "troopType": "Monstrous Creature",
+      "profiles": [
+        {
+          "name": "Great Eagle",
+          "M": 2,
+          "WS": 5,
+          "BS": 0,
+          "S": 4,
+          "T": 4,
+          "W": 3,
+          "I": 4,
+          "A": 3,
+          "Ld": 6
+        }
+      ],
+      "equipment": [
+        "Mighty Claws"
+      ],
+      "specialRules": [
+        "Fly (2)",
+        "Large Target"
+      ],
+      "notes": "60pts each."
+    },
+    {
+      "id": "we_beast_packs",
+      "name": "Wood Elf Beast Packs",
+      "category": "Rare",
+      "ptsPerModel": 11,
+      "minSize": 1,
+      "maxSize": 99,
+      "troopType": "War Beasts",
+      "profiles": [
+        {
+          "name": "Beast Keeper",
+          "M": 5,
+          "WS": 4,
+          "BS": 4,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Light Armour"
+      ],
+      "specialRules": [
+        "Run with the Pack",
+        "Undisciplined"
+      ],
+      "notes": "1 Beast Keeper + beasts: Hound 6pts, Cat 8pts, Boar 10pts, Bear 30pts."
+    }
+  ],
+  "tombKings": [
+    {
+      "id": "high_priest",
+      "name": "High Priest",
+      "category": "Lords",
+      "ptsCost": 140,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "High Priest",
+          "M": 4,
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 4,
+          "W": 3,
+          "I": 2,
+          "A": 2,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "settra_the_imperishable",
+      "name": "Settra the Imperishable",
+      "category": "Lords",
+      "ptsCost": 445,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Settra the Imperishable",
+          "M": "-",
+          "WS": 7,
+          "BS": 3,
+          "S": 6,
+          "T": 5,
+          "W": "-",
+          "I": 3,
+          "A": 5,
+          "Ld": 10
+        },
+        {
+          "name": "Chariot of the Gods",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": 5,
+          "T": 5,
+          "W": 8,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        },
+        {
+          "name": "Skeletal Steed",
+          "M": 8,
+          "WS": 2,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 2,
+          "A": 1,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "tomb_king",
+      "name": "Tomb King",
+      "category": "Lords",
+      "ptsCost": 160,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Tomb King",
+          "M": 4,
+          "WS": 6,
+          "BS": 3,
+          "S": 5,
+          "T": 5,
+          "W": 4,
+          "I": 4,
+          "A": 4,
+          "Ld": 10
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "mortuary_priest",
+      "name": "Mortuary Priest",
+      "category": "Heroes",
+      "ptsCost": 55,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Mortuary Priest",
+          "M": 4,
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 2,
+          "I": 2,
+          "A": 1,
+          "Ld": 7
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "necrotect",
+      "name": "Necrotect",
+      "category": "Heroes",
+      "ptsCost": 55,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Necrotect",
+          "M": 4,
+          "WS": 3,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
+          "W": 2,
+          "I": 3,
+          "A": 2,
+          "Ld": 7
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "nekaph",
+      "name": "Nekaph",
+      "category": "Heroes",
+      "ptsCost": 120,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Nekaph,",
+          "M": 4,
+          "WS": 5,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
+          "W": 2,
+          "I": 4,
+          "A": 3,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "prince_apophas",
+      "name": "Prince Apophas",
+      "category": "Heroes",
+      "ptsCost": 130,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Prince Apophas",
+          "M": 4,
+          "WS": 4,
+          "BS": 3,
+          "S": 4,
+          "T": 3,
+          "W": 4,
+          "I": 1,
+          "A": 5,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "royal_herald",
+      "name": "Royal Herald",
+      "category": "Heroes",
+      "ptsCost": 60,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Royal Herald",
+          "M": 4,
+          "WS": 4,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
+          "W": 2,
+          "I": 3,
+          "A": 3,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "tomb_prince",
+      "name": "Tomb Prince",
+      "category": "Heroes",
+      "ptsCost": 90,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Tomb Prince",
+          "M": 4,
+          "WS": 5,
+          "BS": 3,
+          "S": 4,
+          "T": 5,
+          "W": 3,
+          "I": 3,
+          "A": 3,
+          "Ld": 9
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "skeleton_archers",
+      "name": "Skeleton Archers",
+      "category": "Core",
+      "ptsPerModel": 5,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skeleton Archer",
+          "M": 4,
+          "WS": 2,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 2,
+          "A": 1,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "skeleton_chariots",
+      "name": "Skeleton Chariots",
+      "category": "Core",
+      "ptsPerModel": 41,
+      "minSize": 1,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skeletal Steed",
+          "M": 8,
+          "WS": 2,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 2,
+          "A": 1,
+          "Ld": "-"
+        },
+        {
+          "name": "Skeleton Crew",
+          "M": "-",
+          "WS": 3,
+          "BS": 2,
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 2,
+          "A": 1,
+          "Ld": 7
+        },
+        {
+          "name": "Skeleton Chariot",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": 4,
+          "T": 4,
+          "W": 3,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "skeleton_horse_archers",
+      "name": "Skeleton Horse Archers",
+      "category": "Core",
+      "ptsPerModel": 11,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skeletal Steed",
+          "M": 8,
+          "WS": 2,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 2,
+          "A": 1,
+          "Ld": "-"
+        },
+        {
+          "name": "Skeleton Horse Archer",
+          "M": "-",
+          "WS": 2,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 2,
+          "A": 1,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "skeleton_horsemen",
+      "name": "Skeleton Horsemen",
+      "category": "Core",
+      "ptsPerModel": 11,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skeletal Steed",
+          "M": 8,
+          "WS": 2,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 2,
+          "A": 1,
+          "Ld": "-"
+        },
+        {
+          "name": "Skeleton Horseman",
+          "M": "-",
+          "WS": 2,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 2,
+          "A": 1,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "skeleton_skirmishers",
+      "name": "Skeleton Skirmishers",
+      "category": "Core",
+      "ptsPerModel": 4,
+      "minSize": 5,
+      "maxSize": 20,
+      "profiles": [
+        {
+          "name": "Skeleton Skirmisher",
+          "M": 5,
+          "WS": 2,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 2,
+          "A": 1,
+          "Ld": 4
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "skeleton_warriors",
+      "name": "Skeleton Warriors",
+      "category": "Core",
+      "ptsPerModel": 4,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skeleton Warrior",
+          "M": 4,
+          "WS": 2,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 2,
+          "A": 1,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "tomb_swarms",
+      "name": "Tomb Swarms",
+      "category": "Core",
+      "ptsPerModel": 37,
+      "minSize": 2,
+      "maxSize": 10,
+      "profiles": [
+        {
+          "name": "Tomb Swarm",
+          "M": 5,
+          "WS": 3,
+          "BS": 0,
+          "S": 2,
+          "T": 2,
+          "W": 5,
+          "I": 1,
+          "A": 5,
+          "Ld": 10
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "carrion",
+      "name": "Carrion",
+      "category": "Special",
+      "ptsPerModel": 27,
+      "minSize": 2,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Carrion",
+          "M": 2,
+          "WS": 3,
+          "BS": 0,
+          "S": 4,
+          "T": 4,
+          "W": 2,
+          "I": 3,
+          "A": 3,
+          "Ld": 4
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "khemrian_warsphinx",
+      "name": "Khemrian Warsphinx",
+      "category": "Special",
+      "ptsPerModel": 175,
+      "minSize": 1,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Tomb Guard Crew",
+          "M": "-",
+          "WS": 3,
+          "BS": 3,
+          "S": 4,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": 8
+        },
+        {
+          "name": "Khemrian Warsphinx",
+          "M": 6,
+          "WS": 4,
+          "BS": "-",
+          "S": 5,
+          "T": 6,
+          "W": 5,
+          "I": 1,
+          "A": 4,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "necropolis_knights",
+      "name": "Necropolis Knights",
+      "category": "Special",
+      "ptsPerModel": 54,
+      "minSize": 2,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Necroserpent",
+          "M": 7,
+          "WS": 3,
+          "BS": "-",
+          "S": 5,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 3,
+          "Ld": "-"
+        },
+        {
+          "name": "Necropolis Knight",
+          "M": "-",
+          "WS": 4,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
+          "W": 3,
+          "I": 3,
+          "A": 2,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "sepulchral_stalkers",
+      "name": "Sepulchral Stalkers",
+      "category": "Special",
+      "ptsPerModel": 52,
+      "minSize": 2,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Sepulchral Stalker",
+          "M": 7,
+          "WS": 3,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
+          "W": 3,
+          "I": 3,
+          "A": 2,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "tomb_guard",
+      "name": "Tomb Guard",
+      "category": "Special",
+      "ptsPerModel": 10,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Tomb Guard",
+          "M": 4,
+          "WS": 3,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
+          "W": 1,
+          "I": 2,
+          "A": 1,
+          "Ld": 7
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "tomb_scorpion",
+      "name": "Tomb Scorpion",
+      "category": "Special",
+      "ptsPerModel": 70,
+      "minSize": 1,
+      "maxSize": 1,
+      "profiles": [
+        {
+          "name": "Tomb Scorpion",
+          "M": 7,
+          "WS": 4,
+          "BS": 0,
+          "S": 5,
+          "T": 5,
+          "W": 3,
+          "I": 3,
+          "A": 4,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Ambushers",
+        "The Terrors Below"
+      ],
+      "specialRules": [
+        "The Terrors Below"
+      ]
+    },
+    {
+      "id": "ushabti",
+      "name": "Ushabti",
+      "category": "Special",
+      "ptsPerModel": 49,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Ushabti",
+          "M": 5,
+          "WS": 4,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
+          "W": 3,
+          "I": 2,
+          "A": 3,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "casket_of_souls",
+      "name": "Casket of Souls",
+      "category": "Rare",
+      "ptsPerModel": 135,
+      "minSize": 1,
+      "maxSize": 1,
+      "profiles": [
+        {
+          "name": "Casket of Souls",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": "-",
+          "T": 6,
+          "W": 4,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        },
+        {
+          "name": "Casket Guardians",
+          "M": 4,
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 4,
+          "I": 3,
+          "A": 4,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Casket Guardians"
+      ],
+      "specialRules": []
+    },
+    {
+      "id": "necrolith_colossus",
+      "name": "Necrolith Colossus",
+      "category": "Rare",
+      "ptsPerModel": 160,
+      "minSize": 1,
+      "maxSize": 1,
+      "profiles": [
+        {
+          "name": "Necrolith Colossus",
+          "M": 6,
+          "WS": 3,
+          "BS": 2,
+          "S": 6,
+          "T": 6,
+          "W": 5,
+          "I": 1,
+          "A": 4,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "necrosphinx",
+      "name": "Necrosphinx",
+      "category": "Rare",
+      "ptsPerModel": 195,
+      "minSize": 1,
+      "maxSize": 1,
+      "profiles": [
+        {
+          "name": "Necrosphinx",
+          "M": 6,
+          "WS": 4,
+          "BS": 0,
+          "S": 5,
+          "T": 6,
+          "W": 6,
+          "I": 1,
+          "A": 5,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "screaming_skull_catapult",
+      "name": "Screaming Skull Catapult",
+      "category": "Rare",
+      "ptsPerModel": 105,
+      "minSize": 1,
+      "maxSize": 1,
+      "profiles": [
+        {
+          "name": "Screaming Skull Catapult",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": "-",
+          "T": 6,
+          "W": 3,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": [
+        "Skulls of the Foe"
+      ]
+    },
+    {
+      "id": "winged_warsphinx",
+      "name": "Winged Warsphinx",
+      "category": "Rare",
+      "ptsPerModel": 180,
+      "minSize": 1,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Winged Warsphinx",
+          "M": 6,
+          "WS": 4,
+          "BS": 0,
+          "S": 5,
+          "T": 6,
+          "W": 5,
+          "I": 1,
+          "A": 4,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    }
+  ],
+  "lizardmen": [
+    {
+      "id": "saurus_oldblood",
+      "name": "Saurus Oldblood",
+      "category": "Lords",
+      "ptsCost": 140,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Saurus Oldblood",
+          "M": 4,
+          "WS": 6,
+          "BS": 0,
+          "S": 5,
+          "T": 5,
+          "W": 3,
+          "I": 3,
+          "A": 5,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "slann_mage_priests",
+      "name": "Slann Mage-Priests",
+      "category": "Lords",
+      "ptsCost": 285,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Slann Mage-Priest",
+          "M": 2,
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 4,
+          "W": 5,
+          "I": 2,
+          "A": 1,
+          "Ld": 9
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "saurus_scar_veteran",
+      "name": "Saurus Scar-Veteran",
+      "category": "Heroes",
+      "ptsCost": 90,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Saurus Scar-Veteran",
+          "M": 4,
+          "WS": 5,
+          "BS": 0,
+          "S": 5,
+          "T": 5,
+          "W": 2,
+          "I": 3,
+          "A": 4,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "skink_chief",
+      "name": "Skink Chief",
+      "category": "Heroes",
+      "ptsCost": 45,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Skink Chief",
+          "M": 6,
+          "WS": 4,
+          "BS": 5,
+          "S": 4,
+          "T": 3,
+          "W": 2,
+          "I": 6,
+          "A": 3,
+          "Ld": 6
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "skink_priest",
+      "name": "Skink Priest",
+      "category": "Heroes",
+      "ptsCost": 60,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Skink Priest",
+          "M": 6,
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 2,
+          "W": 2,
+          "I": 4,
+          "A": 1,
+          "Ld": 6
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "jungle_swarms",
+      "name": "Jungle Swarms",
+      "category": "Core",
+      "ptsPerModel": 40,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Jungle Swarms",
+          "M": 5,
+          "WS": 3,
+          "BS": 0,
+          "S": 2,
+          "T": 2,
+          "W": 5,
+          "I": 1,
+          "A": 5,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "saurus_warriors",
+      "name": "Saurus Warriors",
+      "category": "Core",
+      "ptsPerModel": 14,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Saurus Warrior",
+          "M": 4,
+          "WS": 3,
+          "BS": 0,
+          "S": 4,
+          "T": 4,
+          "W": 1,
+          "I": 1,
+          "A": 2,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "skink_skirmishers",
+      "name": "Skink Skirmishers",
+      "category": "Core",
+      "ptsPerModel": 5,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skink",
+          "M": 6,
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 2,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "temple_guard",
+      "name": "Temple Guard",
+      "category": "Core",
+      "ptsPerModel": 16,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Temple Guard",
+          "M": 4,
+          "WS": 4,
+          "BS": 0,
+          "S": 4,
+          "T": 4,
+          "W": 1,
+          "I": 1,
+          "A": 2,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "bastiladon",
+      "name": "Bastiladon",
+      "category": "Special",
+      "ptsPerModel": 160,
+      "minSize": 1,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skink Crew",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 4,
+          "A": 1,
+          "Ld": 6
+        },
+        {
+          "name": "Bastiladon",
+          "M": 4,
+          "WS": 3,
+          "BS": "-",
+          "S": 4,
+          "T": 5,
+          "W": 4,
+          "I": 1,
+          "A": 3,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "chameleon_skinks",
+      "name": "Chameleon Skinks",
+      "category": "Special",
+      "ptsPerModel": 11,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Chameleon Skink",
+          "M": 6,
+          "WS": 2,
+          "BS": 4,
+          "S": 3,
+          "T": 2,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 6
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "cold_one_riders",
+      "name": "Cold One Riders",
+      "category": "Special",
+      "ptsPerModel": 34,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Cold One",
+          "M": 7,
+          "WS": 3,
+          "BS": "-",
+          "S": 4,
+          "T": "-",
+          "W": "-",
+          "I": 2,
+          "A": 2,
+          "Ld": "-"
+        },
+        {
+          "name": "Cold One Rider",
+          "M": "-",
+          "WS": 4,
+          "BS": 0,
+          "S": 4,
+          "T": 4,
+          "W": 1,
+          "I": 2,
+          "A": 2,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "kroxigor",
+      "name": "Kroxigor",
+      "category": "Special",
+      "ptsPerModel": 49,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Kroxigor",
+          "M": 6,
+          "WS": 3,
+          "BS": 0,
+          "S": 5,
+          "T": 4,
+          "W": 3,
+          "I": 3,
+          "A": 3,
+          "Ld": 7
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "ripperdactyl_riders",
+      "name": "Ripperdactyl Riders",
+      "category": "Special",
+      "ptsPerModel": 40,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Ripperdactyl",
+          "M": 2,
+          "WS": 3,
+          "BS": "-",
+          "S": 4,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 2,
+          "Ld": "-"
+        },
+        {
+          "name": "Ripperdactyl Rider",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 2,
+          "I": 4,
+          "A": 1,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "terradon_riders",
+      "name": "Terradon Riders",
+      "category": "Special",
+      "ptsPerModel": 32,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Terradon",
+          "M": 2,
+          "WS": 3,
+          "BS": "-",
+          "S": 4,
+          "T": "-",
+          "W": "-",
+          "I": 2,
+          "A": 1,
+          "Ld": "-"
+        },
+        {
+          "name": "Terradon Rider",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 2,
+          "I": 4,
+          "A": 1,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "ancient_stegadon",
+      "name": "Ancient Stegadon",
+      "category": "Rare",
+      "ptsPerModel": 230,
+      "minSize": 1,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skink Crew",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 4,
+          "A": 1,
+          "Ld": 6
+        },
+        {
+          "name": "Ancient Stegadon",
+          "M": 6,
+          "WS": 4,
+          "BS": "-",
+          "S": 6,
+          "T": 6,
+          "W": 5,
+          "I": 1,
+          "A": 3,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "razordon_packs",
+      "name": "Razordon Packs",
+      "category": "Rare",
+      "ptsPerModel": 75,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skink Handler",
+          "M": 6,
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 2,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 5
+        },
+        {
+          "name": "Razordon",
+          "M": 6,
+          "WS": 3,
+          "BS": 4,
+          "S": 5,
+          "T": 4,
+          "W": 3,
+          "I": 4,
+          "A": 2,
+          "Ld": 4
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "salamander_packs",
+      "name": "Salamander Packs",
+      "category": "Rare",
+      "ptsPerModel": 90,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skink Handler",
+          "M": 6,
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 2,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 5
+        },
+        {
+          "name": "Salamander",
+          "M": 6,
+          "WS": 3,
+          "BS": 3,
+          "S": 5,
+          "T": 4,
+          "W": 3,
+          "I": 4,
+          "A": 2,
+          "Ld": 4
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "stegadon",
+      "name": "Stegadon",
+      "category": "Rare",
+      "ptsPerModel": 215,
+      "minSize": 1,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skink Crew",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 4,
+          "A": 1,
+          "Ld": 6
+        },
+        {
+          "name": "Stegadon",
+          "M": 6,
+          "WS": 3,
+          "BS": "-",
+          "S": 5,
+          "T": 6,
+          "W": 5,
+          "I": 2,
+          "A": 4,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "troglodon",
+      "name": "Troglodon",
+      "category": "Rare",
+      "ptsPerModel": 200,
+      "minSize": 1,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Skink Oracle",
+          "M": "-",
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 4,
+          "A": 1,
+          "Ld": 8
+        },
+        {
+          "name": "Troglodon",
+          "M": 7,
+          "WS": 3,
+          "BS": "-",
+          "S": 5,
+          "T": 5,
+          "W": 5,
+          "I": 2,
+          "A": 3,
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    }
+  ],
+  "borderPrinces": [
+    {
+      "id": "renegade_prince",
+      "name": "Renegade Prince",
+      "category": "Lords",
+      "ptsCost": 75,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Renegade Prince",
+          "M": 4,
+          "WS": 6,
+          "BS": 4,
+          "S": 4,
+          "T": 4,
+          "W": 3,
+          "I": 5,
+          "A": 3,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "damsel",
+      "name": "Damsel",
+      "category": "Heroes",
+      "ptsCost": 60,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Damsel",
+          "M": 4,
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 2,
+          "I": 3,
+          "A": 1,
+          "Ld": 7
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "outcast_wizard",
+      "name": "Outcast Wizard",
+      "category": "Heroes",
+      "ptsCost": 45,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "paladin",
+      "name": "Paladin",
+      "category": "Heroes",
+      "ptsCost": 60,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Paladin",
+          "M": 4,
+          "WS": 6,
+          "BS": 3,
+          "S": 4,
+          "T": 4,
+          "W": 2,
+          "I": 4,
+          "A": 3,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "renegade_captain",
+      "name": "Renegade Captain",
+      "category": "Heroes",
+      "ptsCost": 35,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Renegade Captain",
+          "M": 4,
+          "WS": 5,
+          "BS": 4,
+          "S": 4,
+          "T": 4,
+          "W": 2,
+          "I": 4,
+          "A": 2,
+          "Ld": 7
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "sergeants_at_arms",
+      "name": "Sergeants-At-Arms",
+      "category": "Heroes",
+      "ptsCost": 45,
+      "isCharacter": true,
+      "profiles": [
+        {
+          "name": "Sargent-At-Arms",
+          "M": 4,
+          "WS": 4,
+          "BS": 2,
+          "S": 4,
+          "T": 3,
+          "W": 2,
+          "I": 4,
+          "A": 2,
+          "Ld": 7
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "freeblade_knights",
+      "name": "Freeblade Knights",
+      "category": "Core",
+      "ptsPerModel": 18,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Freeblade Knight",
+          "M": "-",
+          "WS": 4,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "hireling_outriders",
+      "name": "Hireling Outriders",
+      "category": "Core",
+      "ptsPerModel": 11,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Warhorse",
+          "M": 8,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        },
+        {
+          "name": "Hireling Outrider",
+          "M": "-",
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 7
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "knights_errant",
+      "name": "Knights Errant",
+      "category": "Core",
+      "ptsPerModel": 19,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Bretonnian Warhorse",
+          "M": 8,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        },
+        {
+          "name": "Knight Errant",
+          "M": "-",
+          "WS": 3,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 7
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "knights_of_the_realm_on_foot",
+      "name": "Knights of the Realm on Foot",
+      "category": "Core",
+      "ptsPerModel": 11,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Knight of the Realm",
+          "M": 4,
+          "WS": 4,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "men_at_arms",
+      "name": "Men-At-Arms",
+      "category": "Core",
+      "ptsPerModel": 4,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Man-at-Arms",
+          "M": 4,
+          "WS": 2,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "mounted_knights_of_the_realm",
+      "name": "Mounted Knights of the Realm",
+      "category": "Core",
+      "ptsPerModel": 24,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Bretonnian Warhorse",
+          "M": 8,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        },
+        {
+          "name": "Mounted Knight of the Realm",
+          "M": "-",
+          "WS": 4,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "peasant_bowmen",
+      "name": "Peasant Bowmen",
+      "category": "Core",
+      "ptsPerModel": 5,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Peasant Bowman",
+          "M": 4,
+          "WS": 2,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 7
+        }
+      ],
+      "equipment": [
+        "Burning Braziers",
+        "Defensive Stakes",
+        "Skirmishers"
+      ],
+      "specialRules": [
+        "Burning Braziers",
+        "Defensive Stakes"
+      ]
+    },
+    {
+      "id": "sellswords",
+      "name": "Sellswords",
+      "category": "Core",
+      "ptsPerModel": 4,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Sellsword",
+          "M": 4,
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "veteran_sellswords",
+      "name": "Veteran Sellswords",
+      "category": "Core",
+      "ptsPerModel": 5,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Veteran Sellsword",
+          "M": 4,
+          "WS": 4,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 5
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "battle_pilgrims_and_grail_reliquae",
+      "name": "Battle Pilgrims & Grail Reliquae",
+      "category": "Special",
+      "ptsPerModel": 6,
+      "minSize": 5,
+      "maxSize": 30,
+      "profiles": [
+        {
+          "name": "Battle Pilgrim",
+          "M": 4,
+          "WS": 2,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 8
+        },
+        {
+          "name": "Grail Reliquae",
+          "M": 4,
+          "WS": 2,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 6,
+          "I": 3,
+          "A": 6,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "border_princes_mortar",
+      "name": "Border Princes Mortar",
+      "category": "Special",
+      "ptsPerModel": 90,
+      "minSize": 1,
+      "maxSize": 1,
+      "profiles": [
+        {
+          "name": "Mortar",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": "-",
+          "T": 7,
+          "W": 3,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "mounted_yeomen",
+      "name": "Mounted Yeomen",
+      "category": "Special",
+      "ptsPerModel": 13,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Warhorse",
+          "M": 8,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        },
+        {
+          "name": "Mounted Yeomen",
+          "M": "-",
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 6
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "questing_knights",
+      "name": "Questing Knights",
+      "category": "Special",
+      "ptsPerModel": 26,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Bretonnian Warhorse",
+          "M": 8,
+          "WS": 3,
+          "BS": "-",
+          "S": 3,
+          "T": "-",
+          "W": "-",
+          "I": 3,
+          "A": 1,
+          "Ld": "-"
+        },
+        {
+          "name": "Questing Knight",
+          "M": "-",
+          "WS": 5,
+          "BS": 2,
+          "S": 4,
+          "T": 3,
+          "W": 1,
+          "I": 4,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "squires",
+      "name": "Squires",
+      "category": "Special",
+      "ptsPerModel": 7,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Squire",
+          "M": 4,
+          "WS": 3,
+          "BS": 3,
+          "S": 3,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 7
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "veteran_freeblade",
+      "name": "Veteran Freeblade",
+      "category": "Special",
+      "ptsPerModel": 22,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [
+        {
+          "name": "Veteran Freeblade",
+          "M": "-",
+          "WS": 4,
+          "BS": 3,
+          "S": 4,
+          "T": 3,
+          "W": 1,
+          "I": 3,
+          "A": 1,
+          "Ld": 8
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "border_princes_brigands",
+      "name": "Border Princes Brigands",
+      "category": "Rare",
+      "ptsPerModel": 4,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "border_princes_organ_gun",
+      "name": "Border Princes Organ Gun",
+      "category": "Rare",
+      "ptsPerModel": 125,
+      "minSize": 1,
+      "maxSize": 1,
+      "profiles": [
+        {
+          "name": "Organ Gun",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": "-",
+          "T": 7,
+          "W": 3,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    },
+    {
+      "id": "field_trebuchet",
+      "name": "Field Trebuchet",
+      "category": "Rare",
+      "ptsPerModel": 100,
+      "minSize": 1,
+      "maxSize": 1,
+      "profiles": [
+        {
+          "name": "Peasant Crew",
+          "M": 4,
+          "WS": 2,
+          "BS": 2,
+          "S": 3,
+          "T": 3,
+          "W": 4,
+          "I": 3,
+          "A": 4,
+          "Ld": 6
+        },
+        {
+          "name": "Field Trebuchet",
+          "M": "-",
+          "WS": "-",
+          "BS": "-",
+          "S": "-",
+          "T": 7,
+          "W": 3,
+          "I": "-",
+          "A": "-",
+          "Ld": "-"
+        }
+      ],
+      "equipment": [],
+      "specialRules": []
+    }
+  ]
+}

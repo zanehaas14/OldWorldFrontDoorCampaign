@@ -1,0 +1,44 @@
+{
+  "weapons": [
+    { "name": "Burning Blade", "pts": 5 }, { "name": "Sword of Striking", "pts": 15 }, { "name": "Biting Blade", "pts": 15 },
+    { "name": "Berserker Blade", "pts": 20 }, { "name": "Sword of Might", "pts": 20 },
+    { "name": "Sword of Swiftness", "pts": 25 }, { "name": "Giant Blade", "pts": 30 },
+    { "name": "Hell-Forged Axe", "pts": 30 }, { "name": "Sword Of Sorrow", "pts": 30 },
+    { "name": "Spelleater Axe", "pts": 35 }, { "name": "Headsman's Axe", "pts": 45 },
+    { "name": "Dragon Slaying Sword", "pts": 50 }, { "name": "Meteor Hammer", "pts": 50 },
+    { "name": "Duellist's Blades", "pts": 55 }, { "name": "Sword of Battle", "pts": 60 },
+    { "name": "Cackling Blade", "pts": 65 }, { "name": "Ogre Blade", "pts": 75 }
+  ],
+  "armour": [
+    { "name": "Enchanted Shield", "pts": 5 }, { "name": "Charmed Shield", "pts": 10 },
+    { "name": "Armour of Fortune", "pts": 20 }, { "name": "Glittering Scales", "pts": 25 },
+    { "name": "Armour of Silvered Steel", "pts": 30 }, { "name": "Armour of Destiny", "pts": 45 },
+    { "name": "Armour of the Midsummer Sun", "pts": 55 }
+  ],
+  "talismans": [
+    { "name": "Luckstone", "pts": 15 }, { "name": "Obsidian Lodestone", "pts": 20 },
+    { "name": "Paymaster's Coin", "pts": 25 }, { "name": "Talisman Of Protection", "pts": 30 },
+    { "name": "Dawnstone", "pts": 35 }
+  ],
+  "enchanted": [
+    { "name": "Potion of Foolhardiness", "pts": 5 }, { "name": "Potion of Speed", "pts": 10 },
+    { "name": "Potion of Toughness", "pts": 20 }, { "name": "Potion of Strength", "pts": 25 },
+    { "name": "Potion Of Fervour", "pts": 30 }, { "name": "Healing Potion", "pts": 35 },
+    { "name": "Wizarding Hat", "pts": 45 }, { "name": "Ruby Ring of Ruin", "pts": 35 }
+  ],
+  "arcane": [
+    { "name": "Earthing Rod", "pts": 5 }, { "name": "Arcane Familiar", "pts": 15 },
+    { "name": "Dispel Scroll", "pts": 20 }, { "name": "Power Scroll", "pts": 20 },
+    { "name": "Becalming Orb", "pts": 20 }, { "name": "Lore Familiar", "pts": 30 },
+    { "name": "Scroll Of Disruption", "pts": 30 }, { "name": "Tome Of Spellcraft", "pts": 30 },
+    { "name": "Staff Of Quietude", "pts": 35 }, { "name": "Arch-Lightning Rod", "pts": 40 },
+    { "name": "Wand of Jet", "pts": 45 }, { "name": "Scroll of Transmogrification", "pts": 50 },
+    { "name": "Feedback Scroll", "pts": 60 }
+  ],
+  "banners": [
+    { "name": "War Banner", "pts": 25 }, { "name": "The Blazing Banner", "pts": 25 },
+    { "name": "Monster Hunter's Tapestry", "pts": 25 }, { "name": "Rampaging Banner", "pts": 30 },
+    { "name": "Banner Of Swirling Wind", "pts": 30 }, { "name": "Razor Standard", "pts": 40 },
+    { "name": "Banner of Iron Resolve", "pts": 50 }, { "name": "Totem Of Wrath", "pts": 50 }
+  ]
+}
