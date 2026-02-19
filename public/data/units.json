@@ -42,12 +42,39 @@
         "5+ Ward Save (No Armour)"
       ],
       "specialRules": [
+        "Elven Reflexes",
         "Fly (8\"), Swiftstride, Close Order, Fear",
         "Shrouded in Mist: Natural 6s To Hit must be re-rolled",
         "Furious Charge: +1A on charge",
         "Stances – Heavenly Headsmen: Killing Blow OR Harvesters of Fear: Ld test at -1, +1A on fail"
       ],
-      "notes": "Anti-Cavalry Assassin. High WS/I strike before Knights."
+      "notes": "Anti-Cavalry Assassin. High WS/I strike before Knights.",
+      "upgrades": [
+        {
+          "id": "pg_champ",
+          "name": "Dawnguard Champion",
+          "pts": 10,
+          "type": "command"
+        },
+        {
+          "id": "pg_std",
+          "name": "Standard Bearer",
+          "pts": 10,
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
+        },
+        {
+          "id": "pg_mus",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        }
+      ]
     },
     {
       "id": "ironbark_sentinels",
@@ -95,14 +122,22 @@
         "Close Order, Fear, Stubborn",
         "Bramble-Barbs: Behemoth/Monster/Monstrous taking wounds get -1M permanently (min 1)"
       ],
-      "notes": "Zone Control. Snipe Monsters with S6 AP-2 and slow them."
+      "notes": "Zone Control. Snipe Monsters with S6 AP-2 and slow them.",
+      "upgrades": [
+        {
+          "id": "is_champ",
+          "name": "Ancient Sentinel",
+          "pts": 10,
+          "type": "command"
+        }
+      ]
     },
     {
       "id": "knights_savage_drake",
       "name": "Knights of the Savage Drake",
       "category": "Rare",
       "ptsPerModel": 68,
-      "minSize": 3,
+      "minSize": 2,
       "maxSize": 6,
       "troopType": "Monstrous Cavalry",
       "base": "50x75mm",
@@ -139,6 +174,7 @@
         "3+ Armour Save (Hard Cap)"
       ],
       "specialRules": [
+        "Elven Reflexes",
         "0-1 Per Army. Gareth must join and cannot leave.",
         "Close Order, Fear, Swiftstride, Move Through Cover, Stubborn",
         "Furious Charge: +1A on charge",
@@ -149,13 +185,39 @@
       "restrictions": [
         "0-1 per army",
         "Gareth must be joined"
+      ],
+      "upgrades": [
+        {
+          "id": "ksd_champ",
+          "name": "Drake Champion",
+          "pts": 10,
+          "type": "command"
+        },
+        {
+          "id": "ksd_std",
+          "name": "Standard Bearer",
+          "pts": 10,
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
+        },
+        {
+          "id": "ksd_mus",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        }
       ]
     },
     {
       "id": "gareth",
       "name": "Gareth (Glade Lord on Great Stag)",
-      "category": "Lords",
-      "ptsCost": 0,
+      "category": "Named Characters",
+      "ptsCost": 200,
       "isCharacter": true,
       "isCustom": true,
       "profiles": [
@@ -172,23 +234,33 @@
           "Ld": 10
         }
       ],
-      "equipment": [],
+      "equipment": [
+        "Hand Weapon",
+        "Heavy Armour (5+ Save — via Black Plates of Ilmennath)"
+      ],
       "specialRules": [
-        "General"
+        "General",
+        "Elven Reflexes",
+        "Move Through Cover",
+        "Strike First",
+        "Evasive",
+        "Rallying Cry",
+        "Ignores Cover"
       ],
       "relic": {
-        "name": "Black Plates of Ilmennath",
+        "name": "Black Plates of Ilmennath (Celestial Ruin)",
         "type": "Armour",
-        "basicForm": "Heavy Armour. Starts 6+ Regen, improves as Gareth causes wounds, up to 4+. At 4+: Empowered State – Daemonic Vessel bound spell (PL3, 2D6+3): +1S, +1A, +1AP to self/mount/unit",
-        "upgradedForm": "All basic form rules. Broken Morale Aura: enemies within X\" cannot use General's Inspiring Presence"
+        "basicForm": "Heavy Armour (5+ save). Regeneration (Scaling): starts 6+; improves to 5+ after 2 unsaved wounds caused; improves to 4+ after 4 unsaved wounds caused (cumulative across battle, permanent). Empowered State (unlocked at 4+): Daemonic Vessel — Bound Spell PL2, cast on 2D6+2. Range Self. Until end of turn: wearer, mount, and joined unit gain +1S, +1A (max 10), and +1AP on all weapons.",
+        "upgradedForm": "All Basic Form rules. Daemonic Vessel upgrades to PL3, cast on 2D6+3 (same effect). Broken Morale Aura (always active): one chosen enemy unit within 12\" of Gareth cannot use their General's Inspiring Presence."
       },
-      "notes": "Must join Knights of the Savage Drake."
+      "notes": "Must join Knights of the Savage Drake.",
+      "isNamed": true
     },
     {
       "id": "daedilae",
       "name": "Daedilae",
-      "category": "Lords",
-      "ptsCost": 190,
+      "category": "Named Characters",
+      "ptsCost": 105,
       "isCharacter": true,
       "isCustom": true,
       "profiles": [
@@ -196,96 +268,521 @@
           "name": "Daedilae",
           "M": 5,
           "WS": 8,
-          "BS": 6,
+          "BS": 5,
           "S": 4,
-          "T": 4,
-          "W": 4,
-          "I": 9,
+          "T": 3,
+          "W": 3,
+          "I": 7,
           "A": 4,
           "Ld": 9
         }
       ],
-      "equipment": [],
+      "equipment": [
+        "Hand Weapon",
+        "Spear of Loec (Combat, S+1, AP-1, Armour Bane 2, Killing Blow)",
+        "Heavy Armour (5+ Save)"
+      ],
       "specialRules": [
+        "Strike First",
+        "Furious Charge (+1A on charge)",
+        "Immune to Psychology",
+        "Move Through Cover",
+        "Evasive",
+        "Elven Reflexes",
         "Level 2 Wizard",
+        "Loner (may join Daedilae's Guard, Parliament Guard, Wardancers freely)",
+        "Flawless Partner (shares Dance/Stance/Choreography of joined unit)",
         "Grim Choreography",
         "Shrouded in Mist"
       ],
       "relic": {
         "name": "Fëalana (Willbreaker)",
         "type": "Weapon",
-        "basicForm": "Har Ganeth Greatsword (S+2, AP-1, Cleaving Blow, Two Hands). Punishing Riposte: enemy natural 1 to hit → Daedilae makes 1 attack back (max 1/phase). Aura of Broken Will: enemy wizards within 9\" suffer -1 to casting.",
-        "upgradedForm": "Riposte unlimited per phase. Aura range increased to 18\"."
+        "basicForm": "Har Ganeth Greatsword: S+2, AP-1, Cleaving Blow, Requires Two Hands. Punishing Riposte: whenever an enemy in base contact rolls a natural 1 to hit against Daedilae in close combat, she immediately makes 1 Attack back against that model's unit using her normal profile and Willbreaker's rules. Maximum one Riposte per Combat phase. Aura of Broken Will: enemy Wizards within 9\" suffer -1 to Casting rolls (applied after all other modifiers).",
+        "upgradedForm": "All Basic Form rules. Punishing Riposte (Enhanced): no longer limited to once per Combat phase — Daedilae makes a Riposte Attack for each natural 1 rolled against her. Aura of Broken Will (Enhanced): range increased to 18\"."
       },
-      "notes": "Frontline duelist and magic disruption."
+      "notes": "Uses High Priestess of Kul Anar profile. May join Daedilae's Guard (Parliament Guard), Wardancers freely.",
+      "troopType": "Regular Infantry (character)",
+      "base": "25x25",
+      "upgrades": [
+        {
+          "id": "dae_weap_hand",
+          "name": "Hand Weapon",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true,
+          "default": true
+        },
+        {
+          "id": "dae_weap_loec",
+          "name": "Spear of Loec",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "dae_wizard_lvl1",
+          "name": "Wizard Level 1",
+          "pts": 25,
+          "type": "special"
+        },
+        {
+          "id": "dae_wizard_lvl2",
+          "name": "Wizard Level 2",
+          "pts": 50,
+          "type": "special"
+        },
+        {
+          "id": "dae_mount_spirit",
+          "name": "Spirit Mount (same as Parliament Guard)",
+          "pts": 40,
+          "type": "mount",
+          "exclusive": true
+        },
+        {
+          "id": "dae_mount_dragon",
+          "name": "Lothaqshynin (Forest Dragon)",
+          "pts": 275,
+          "type": "mount",
+          "exclusive": true
+        },
+        {
+          "id": "lore_dae_battle_magic",
+          "name": "Battle Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_dae_illusion",
+          "name": "Illusion",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_dae_lore_of_the_wilds",
+          "name": "Lore of the Wilds",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        }
+      ],
+      "isNamed": true
     },
     {
-      "id": "treeman_ancient_1",
-      "name": "Treeman Ancient #1",
-      "category": "Lords",
-      "ptsCost": 0,
+      "id": "dugalathir",
+      "name": "Dûgalathir (Watcher of the Void)",
+      "category": "Named Characters",
+      "ptsCost": 265,
       "isCharacter": true,
       "isCustom": true,
-      "profiles": [],
-      "equipment": [],
-      "specialRules": [],
+      "profiles": [
+        {
+          "name": "Dûgalathir",
+          "M": 6,
+          "WS": 6,
+          "BS": 3,
+          "S": 6,
+          "T": 6,
+          "W": 6,
+          "I": 2,
+          "A": 4,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Oaken Fists",
+        "Strangleroots",
+        "Indolair — Double Voulge (Two-handed, S+1, Armour Bane 1)"
+      ],
+      "specialRules": [
+        "Tree Spirit (Regen 5+, Flammable, Immune to Psychology, Move Through Cover)",
+        "Tree Whack",
+        "Magical Attacks",
+        "Large Target",
+        "Terror",
+        "Stubborn",
+        "Wizard Level 2",
+        "Elven Reflexes"
+      ],
       "relic": {
-        "name": "TBD",
-        "type": "Arcane Item",
-        "basicForm": "TBD",
-        "upgradedForm": "TBD"
-      }
+        "name": "Indolair (Hungering Heart)",
+        "type": "Weapon",
+        "basicForm": "Double Voulge (Two-handed, S+1, Armour Bane 1). Twin-Bladed Hunger: bearer gains +1 Attack. Call of the Dark Woods: bearer may cast Tree Singing as Bound Spell PL2. Place a 3\" template within 15\" — treated as woodland, enemy units treat it as Dangerous Terrain. Watcher's Vigilance: whilst within 3\" of a woodland feature, Dispel range increases by 3\".",
+        "upgradedForm": "All Basic Form rules. Ravenous Assault: bearer gains +2 Attacks (replaces +1). Song of the Shadowed Grove: Tree Singing upgrades to Bound Spell PL3, large (5\") template. Sentinel of the Void: within 3\" of woodland, Dispel range +3\" AND roll an extra D6 on Dispel rolls, discarding the lowest."
+      },
+      "isNamed": true,
+      "troopType": "Monstrous Creature (character)",
+      "upgrades": [
+        {
+          "id": "dug_wiz3",
+          "name": "Wizard Level 3",
+          "pts": 35,
+          "type": "special"
+        },
+        {
+          "id": "dug_wiz4",
+          "name": "Wizard Level 4",
+          "pts": 70,
+          "type": "special",
+          "note": "from Lvl 2"
+        },
+        {
+          "id": "lore_dug_battle_magic",
+          "name": "Battle Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_dug_elementalism",
+          "name": "Elementalism",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_dug_lore_of_the_wilds",
+          "name": "Lore of the Wilds",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "sprite_luminescents_dug",
+          "name": "A Resplendence of Luminescents",
+          "pts": 10,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_netlings_dug",
+          "name": "An Annoyance of Netlings",
+          "pts": 15,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_despairs_dug",
+          "name": "A Lamentation of Despairs",
+          "pts": 20,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_spites_dug",
+          "name": "A Murder of Spites",
+          "pts": 25,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_mischiefs_dug",
+          "name": "A Befuddlement of Mischiefs",
+          "pts": 30,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_malevolents_dug",
+          "name": "A Muster of Malevolents",
+          "pts": 40,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_terrors_dug",
+          "name": "A Blight of Terrors",
+          "pts": 50,
+          "type": "sprites"
+        }
+      ]
     },
     {
-      "id": "treeman_ancient_2",
-      "name": "Treeman Ancient #2",
-      "category": "Lords",
-      "ptsCost": 0,
+      "id": "elenornath",
+      "name": "Elenornath (Watcher of the Stars)",
+      "category": "Named Characters",
+      "ptsCost": 265,
       "isCharacter": true,
       "isCustom": true,
-      "profiles": [],
-      "equipment": [],
-      "specialRules": [],
+      "profiles": [
+        {
+          "name": "Elenornath",
+          "M": 6,
+          "WS": 6,
+          "BS": 3,
+          "S": 6,
+          "T": 6,
+          "W": 6,
+          "I": 2,
+          "A": 4,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Oaken Fists",
+        "Strangleroots",
+        "Elenraith — Celestial Scourge (counts as weapon)",
+        "Elenraith — Dark Shield (counts as shield)"
+      ],
+      "specialRules": [
+        "Tree Spirit (Regen 5+, Flammable, Immune to Psychology, Move Through Cover)",
+        "Tree Whack",
+        "Magical Attacks",
+        "Large Target",
+        "Terror",
+        "Stubborn",
+        "Wizard Level 2",
+        "Elven Reflexes"
+      ],
       "relic": {
-        "name": "TBD",
-        "type": "TBD",
-        "basicForm": "TBD",
-        "upgradedForm": "TBD"
-      }
+        "name": "Elenraith (Star-Shower)",
+        "type": "Enchanted Item",
+        "basicForm": "Shield Passive: bearer reduces all Multiple Wounds suffered by 1 (minimum 1). Single Use — Celestial Fire: once per battle, place a 3\" template within 24\". All models under it suffer S4 AP-1 hit with Magical Attacks and Flaming Attacks. The struck area becomes Difficult Terrain until the start of the player's next turn.",
+        "upgradedForm": "Shield Passive (Enhanced): bearer reduces all Multiple Wounds by 1 (minimum 1). Additionally, if bearer would be slain by a Monster Slayer wound, instead reduce remaining Wounds to half starting value (round up) and bearer may still attempt Regeneration saves. Two Uses — Celestial Fire: twice per battle (same effect as Basic Form)."
+      },
+      "isNamed": true,
+      "troopType": "Monstrous Creature (character)",
+      "upgrades": [
+        {
+          "id": "eln_wiz3",
+          "name": "Wizard Level 3",
+          "pts": 35,
+          "type": "special"
+        },
+        {
+          "id": "eln_wiz4",
+          "name": "Wizard Level 4",
+          "pts": 70,
+          "type": "special",
+          "note": "from Lvl 2"
+        },
+        {
+          "id": "lore_eln_battle_magic",
+          "name": "Battle Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_eln_elementalism",
+          "name": "Elementalism",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_eln_lore_of_the_wilds",
+          "name": "Lore of the Wilds",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "sprite_luminescents_eln",
+          "name": "A Resplendence of Luminescents",
+          "pts": 10,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_netlings_eln",
+          "name": "An Annoyance of Netlings",
+          "pts": 15,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_despairs_eln",
+          "name": "A Lamentation of Despairs",
+          "pts": 20,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_spites_eln",
+          "name": "A Murder of Spites",
+          "pts": 25,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_mischiefs_eln",
+          "name": "A Befuddlement of Mischiefs",
+          "pts": 30,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_malevolents_eln",
+          "name": "A Muster of Malevolents",
+          "pts": 40,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_terrors_eln",
+          "name": "A Blight of Terrors",
+          "pts": 50,
+          "type": "sprites"
+        }
+      ]
     },
     {
       "id": "rephal",
       "name": "Rephal (Khainite Assassin)",
-      "category": "Heroes",
-      "ptsCost": 0,
+      "category": "Named Characters",
+      "ptsCost": 80,
       "isCharacter": true,
       "isCustom": true,
-      "profiles": [],
-      "equipment": [],
-      "specialRules": [],
+      "profiles": [
+        {
+          "name": "Rephal Morgeil",
+          "M": 5,
+          "WS": 9,
+          "BS": 7,
+          "S": 4,
+          "T": 3,
+          "W": 2,
+          "I": 8,
+          "A": 3,
+          "Ld": 8
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Pair of Rune-Etched Blades",
+        "Light Armour"
+      ],
+      "specialRules": [
+        "Elven Reflexes",
+        "Hidden (deploys in friendly unit)",
+        "Killing Blow",
+        "Scouts",
+        "Skirmishers",
+        "Immune to Psychology",
+        "Loner"
+      ],
       "relic": {
-        "name": "TBD",
+        "name": "Nethu's Claw",
         "type": "Talisman",
-        "basicForm": "TBD",
-        "upgradedForm": "TBD"
-      }
+        "basicForm": "An ivory ring of fused finger bones. The wearer gains a 5+ ward save. The wearer may always allocate attacks against enemy characters, ignoring the Look Out, Sir! rule.",
+        "upgradedForm": "All Basic Form rules (5+ ward save, ignore Look Out Sir on character allocation). Once per game, the wearer may use the Hidden special rule to re-hide (as if deploying again)."
+      },
+      "isNamed": true,
+      "troopType": "Regular Infantry (character)",
+      "base": "25x25",
+      "upgrades": [
+        {
+          "id": "rep_weap_hand",
+          "name": "Hand Weapon",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true,
+          "default": true
+        },
+        {
+          "id": "rep_weap_ahw",
+          "name": "Additional Hand Weapon",
+          "pts": 3,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "rep_weap_great",
+          "name": "Great Weapon",
+          "pts": 4,
+          "type": "equipment",
+          "exclusive": true
+        }
+      ]
     },
     {
       "id": "caerwynne",
       "name": "Caerwynne (Shadow Dancer)",
-      "category": "Heroes",
-      "ptsCost": 0,
+      "category": "Named Characters",
+      "ptsCost": 105,
       "isCharacter": true,
       "isCustom": true,
-      "profiles": [],
-      "equipment": [],
-      "specialRules": [],
+      "profiles": [
+        {
+          "name": "Caerwynne",
+          "M": 5,
+          "WS": 8,
+          "BS": 5,
+          "S": 4,
+          "T": 3,
+          "W": 3,
+          "I": 7,
+          "A": 4,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Spear of Loec (Combat, S+1, AP-1, Armour Bane 2, Killing Blow)",
+        "Heavy Armour (5+ Save)"
+      ],
+      "specialRules": [
+        "Strike First",
+        "Furious Charge (+1A on charge)",
+        "Immune to Psychology",
+        "Move Through Cover",
+        "Evasive",
+        "Elven Reflexes",
+        "Loner (may join Wardancers freely)",
+        "Flawless Partner (shares Dance/Stance/Choreography of joined unit)",
+        "Troubadour of Loec"
+      ],
       "relic": {
-        "name": "TBD",
+        "name": "Laurels of Thalgil (Shifting Stars)",
         "type": "Enchanted Item",
-        "basicForm": "TBD",
-        "upgradedForm": "TBD"
-      }
+        "basicForm": "Constant — Pathwalker's Grace: Caerwynne and any joined unit gain Swiftstride. Single Use — The Shifting Path (Command phase only): Caerwynne and her joined unit teleport to any location on the battlefield (not within 8\" of enemy models). Caerwynne must pass a Leadership test; if failed, the unit scatters D6\" in a random direction. If scatter would place unit within 1\" of enemy or impassable terrain, the teleport fails and the use is expended. After teleporting, the unit cannot move again this Movement phase but may act normally otherwise.",
+        "upgradedForm": "Constant — Pathwalker's Blessing: Caerwynne and joined unit gain Swiftstride and First Charge (always active). Single Use — The Trickster's Path: same teleport rules as Basic Form. The Dual-Masked Dance: after successfully teleporting, in their next combat phase the unit may choose TWO of the four Dances of Loec simultaneously: Whirling Death (AP+2), Storm of Blades (+1 Attack), The Shadows Coil (4+ ward vs wounds), Woven Mist (enemies -1 to hit). Both dances active for that combat phase only. If the unit doesn't enter combat before the next Movement phase, this benefit is lost."
+      },
+      "isNamed": true,
+      "troopType": "Regular Infantry (character)",
+      "base": "25x25",
+      "upgrades": [
+        {
+          "id": "cae_weap_hand",
+          "name": "Hand Weapon",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true,
+          "default": true
+        },
+        {
+          "id": "cae_weap_loec",
+          "name": "Spear of Loec",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "cae_wizard_lvl1",
+          "name": "Wizard Level 1",
+          "pts": 25,
+          "type": "special"
+        },
+        {
+          "id": "cae_wizard_lvl2",
+          "name": "Wizard Level 2",
+          "pts": 50,
+          "type": "special"
+        },
+        {
+          "id": "lore_cae_battle_magic",
+          "name": "Battle Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_cae_illusion",
+          "name": "Illusion",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_cae_lore_of_the_wilds",
+          "name": "Lore of the Wilds",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        }
+      ],
+      "notes": "Uses High Priestess of Kul Anar profile. May join Wardancers freely."
     },
     {
       "id": "we_glade_lord",
@@ -311,12 +808,138 @@
       "equipment": [
         "Hand Weapon",
         "Light Armour",
-        "Asrai Longbow (R32\", S:User, AP-, Armour Bane 1, Volley Fire)"
+        "Asrai Longbow (R32\", S:User, AP 1, Armour Bane 1, Volley Fire)"
       ],
       "specialRules": [
-        "Elven Reflexes (+1I first round)",
-        "Talismanic Tattoos (6+ Ward)",
-        "Woodland Ambush"
+        "Elven Reflexes (+1I first round)"
+      ],
+      "upgrades": [
+        {
+          "id": "gl_weap_hand",
+          "name": "Hand Weapon",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true,
+          "default": true
+        },
+        {
+          "id": "gl_weap_ahw",
+          "name": "Additional Hand Weapon",
+          "pts": 3,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "gl_weap_great",
+          "name": "Great Weapon",
+          "pts": 4,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "gl_weap_cavspear",
+          "name": "Cavalry Spear",
+          "pts": 2,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "gl_shield",
+          "name": "Shield",
+          "pts": 3,
+          "type": "equipment"
+        },
+        {
+          "id": "sprite_luminescents",
+          "name": "A Resplendence of Luminescents",
+          "pts": 10,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_netlings",
+          "name": "An Annoyance of Netlings",
+          "pts": 15,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_despairs",
+          "name": "A Lamentation of Despairs",
+          "pts": 20,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_spites",
+          "name": "A Murder of Spites",
+          "pts": 25,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_mischiefs",
+          "name": "A Befuddlement of Mischiefs",
+          "pts": 30,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_malevolents",
+          "name": "A Muster of Malevolents",
+          "pts": 40,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_terrors",
+          "name": "A Blight of Terrors",
+          "pts": 50,
+          "type": "sprites"
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        }
       ],
       "notes": "Mount: Elven Steed, Great Stag, Warhawk, Great Eagle, Forest Dragon. Kindred, Magic Items (100pts), Enchanted Arrows, Forest Sprites."
     },
@@ -347,11 +970,89 @@
         "Asrai Longbow"
       ],
       "specialRules": [
-        "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
-        "Woodland Ambush"
+        "Elven Reflexes"
       ],
-      "notes": "Mount: Elven Steed, Great Stag, Warhawk, Great Eagle. May be BSB. Magic Items (50pts)."
+      "notes": "Mount: Elven Steed, Great Stag, Warhawk, Great Eagle. May be BSB. Magic Items (50pts).",
+      "upgrades": [
+        {
+          "id": "gc_weap_hand",
+          "name": "Hand Weapon",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true,
+          "default": true
+        },
+        {
+          "id": "gc_weap_ahw",
+          "name": "Additional Hand Weapon",
+          "pts": 3,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "gc_weap_great",
+          "name": "Great Weapon",
+          "pts": 4,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "gc_weap_cavspear",
+          "name": "Cavalry Spear",
+          "pts": 2,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        }
+      ]
     },
     {
       "id": "we_spellweaver",
@@ -379,8 +1080,44 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
         "Wizard Level 3 (+35pts for Lvl 4)"
+      ],
+      "upgrades": [
+        {
+          "id": "wizard_lvl4",
+          "name": "Wizard Level 4",
+          "pts": 35,
+          "type": "special",
+          "note": "upgrade from Lvl 3"
+        },
+        {
+          "id": "lore_sw_battle_magic",
+          "name": "Battle Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_sw_elementalism",
+          "name": "Elementalism",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_sw_illusion",
+          "name": "Illusion",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_sw_lore_of_the_wilds",
+          "name": "Lore of the Wilds",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        }
       ],
       "notes": "Lores: Battle Magic, Elementalism, Illusion, Lore of the Wilds. Mount: Elven Steed, Warhawk, Great Eagle, Unicorn. Magic Items (100pts)."
     },
@@ -410,8 +1147,43 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
         "Wizard Level 1 (+35pts for Lvl 2)"
+      ],
+      "upgrades": [
+        {
+          "id": "wizard_lvl2",
+          "name": "Wizard Level 2",
+          "pts": 35,
+          "type": "special"
+        },
+        {
+          "id": "lore_ss_battle_magic",
+          "name": "Battle Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_ss_elementalism",
+          "name": "Elementalism",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_ss_illusion",
+          "name": "Illusion",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_ss_lore_of_the_wilds",
+          "name": "Lore of the Wilds",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        }
       ],
       "notes": "Lores: Battle Magic, Elementalism, Illusion, Lore of the Wilds. Mount: Elven Steed, Warhawk, Great Eagle, Unicorn. Magic Items (50pts)."
     },
@@ -441,6 +1213,7 @@
         "Hand Weapon"
       ],
       "specialRules": [
+        "Elven Reflexes",
         "Evasive",
         "Furious Charge",
         "Move Through Cover",
@@ -449,6 +1222,51 @@
         "Strike First",
         "Talismanic Tattoos (6+ Ward)",
         "Troubadour of Loec"
+      ],
+      "upgrades": [
+        {
+          "id": "sd_weap_loec",
+          "name": "Spear of Loec",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true,
+          "default": true
+        },
+        {
+          "id": "sd_weap_trickster",
+          "name": "Trickster's Blades",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "wizard_lvl1",
+          "name": "Wizard Level 1",
+          "pts": 35,
+          "type": "special",
+          "note": "optional"
+        },
+        {
+          "id": "lore_sd_battle_magic",
+          "name": "Battle Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_sd_illusion",
+          "name": "Illusion",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_sd_lore_of_the_wilds",
+          "name": "Lore of the Wilds",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        }
       ],
       "notes": "Optional Wizard Lvl 1. Lores: Battle Magic, Illusion, Lore of the Wilds. Magic Items (50pts). Dances of Loec when joined to Wardancers."
     },
@@ -479,10 +1297,68 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
         "Hawk-eyed Archer",
         "Scouts",
         "Sniper"
+      ],
+      "upgrades": [
+        {
+          "id": "ws_weap_hand",
+          "name": "Hand Weapon",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true,
+          "default": true
+        },
+        {
+          "id": "ws_weap_ahw",
+          "name": "Additional Hand Weapon",
+          "pts": 3,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "sprite_luminescents",
+          "name": "A Resplendence of Luminescents",
+          "pts": 10,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_netlings",
+          "name": "An Annoyance of Netlings",
+          "pts": 15,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_despairs",
+          "name": "A Lamentation of Despairs",
+          "pts": 20,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_spites",
+          "name": "A Murder of Spites",
+          "pts": 25,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_mischiefs",
+          "name": "A Befuddlement of Mischiefs",
+          "pts": 30,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_malevolents",
+          "name": "A Muster of Malevolents",
+          "pts": 40,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_terrors",
+          "name": "A Blight of Terrors",
+          "pts": 50,
+          "type": "sprites"
+        }
       ],
       "notes": "May take: AHW, Light Armour. Magic Items (50pts). Enchanted Arrows, Forest Sprites."
     },
@@ -516,6 +1392,64 @@
         "Flammable",
         "Magical Attacks",
         "Wizard Lvl 1 (+35pts for Lvl 2)"
+      ],
+      "upgrades": [
+        {
+          "id": "bw_weap_hand",
+          "name": "Hand Weapon",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true,
+          "default": true
+        },
+        {
+          "id": "bw_weap_ahw",
+          "name": "Additional Hand Weapon",
+          "pts": 3,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "bw_weap_great",
+          "name": "Great Weapon",
+          "pts": 4,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "wizard_lvl2",
+          "name": "Wizard Level 2",
+          "pts": 35,
+          "type": "special"
+        },
+        {
+          "id": "lore_bw_battle_magic",
+          "name": "Battle Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_bw_elementalism",
+          "name": "Elementalism",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_bw_illusion",
+          "name": "Illusion",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_bw_lore_of_the_wilds",
+          "name": "Lore of the Wilds",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        }
       ],
       "notes": "Lores: Battle Magic, Elementalism, Illusion, Lore of the Wilds. Magic Items (50pts)."
     },
@@ -555,6 +1489,84 @@
         "Stubborn",
         "Wizard Lvl 2 (+35/+70 for 3/4)"
       ],
+      "upgrades": [
+        {
+          "id": "wizard_lvl3",
+          "name": "Wizard Level 3",
+          "pts": 35,
+          "type": "special"
+        },
+        {
+          "id": "wizard_lvl4",
+          "name": "Wizard Level 4",
+          "pts": 70,
+          "type": "special",
+          "note": "from Lvl 2"
+        },
+        {
+          "id": "sprite_luminescents",
+          "name": "A Resplendence of Luminescents",
+          "pts": 10,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_netlings",
+          "name": "An Annoyance of Netlings",
+          "pts": 15,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_despairs",
+          "name": "A Lamentation of Despairs",
+          "pts": 20,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_spites",
+          "name": "A Murder of Spites",
+          "pts": 25,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_mischiefs",
+          "name": "A Befuddlement of Mischiefs",
+          "pts": 30,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_malevolents",
+          "name": "A Muster of Malevolents",
+          "pts": 40,
+          "type": "sprites"
+        },
+        {
+          "id": "sprite_terrors",
+          "name": "A Blight of Terrors",
+          "pts": 50,
+          "type": "sprites"
+        },
+        {
+          "id": "lore_ta_battle_magic",
+          "name": "Battle Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_ta_elementalism",
+          "name": "Elementalism",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_ta_lore_of_the_wilds",
+          "name": "Lore of the Wilds",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        }
+      ],
       "notes": "Lores: Battle Magic, Elementalism, Lore of the Wilds. Magic Items (100pts)."
     },
     {
@@ -584,7 +1596,6 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
         "Martial Prowess",
         "Courage Beyond Compare"
       ],
@@ -707,6 +1718,94 @@
       "notes": "Dark Elf datasheet for Rephal. Magic Items (50pts). Options: Repeater Xbows +3, AHW +3, Light Armour +5, Cloak of Twilight +15, Dark Venom +15."
     },
     {
+      "id": "high_priestess_kul_anar",
+      "name": "High Priestess of Kul Anar",
+      "category": "Characters",
+      "ptsCost": 105,
+      "isCharacter": true,
+      "troopType": "Regular Infantry (character)",
+      "base": "25x25",
+      "profiles": [
+        {
+          "name": "High Priestess of Kul Anar",
+          "M": 5,
+          "WS": 8,
+          "BS": 5,
+          "S": 4,
+          "T": 3,
+          "W": 3,
+          "I": 7,
+          "A": 4,
+          "Ld": 9
+        }
+      ],
+      "equipment": [
+        "Hand Weapon",
+        "Spear of Loec (Combat, S+1, AP-1, Armour Bane 2, Killing Blow)",
+        "Heavy Armour (5+ Save)"
+      ],
+      "specialRules": [
+        "Strike First",
+        "Furious Charge (+1A on charge)",
+        "Immune to Psychology",
+        "Move Through Cover",
+        "Evasive",
+        "Loner (Kult of Kul Anar — may join Daedilae's Guard, Cult Acolytes, Wardancers only)",
+        "Flawless Partner (shares Dance/Stance/Choreography of joined unit)"
+      ],
+      "upgrades": [
+        {
+          "id": "hp_weap_hand",
+          "name": "Hand Weapon",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true,
+          "default": true
+        },
+        {
+          "id": "hp_weap_loec",
+          "name": "Spear of Loec",
+          "pts": 0,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "hp_wizard_lvl1",
+          "name": "Wizard Level 1",
+          "pts": 25,
+          "type": "special"
+        },
+        {
+          "id": "hp_wizard_lvl2",
+          "name": "Wizard Level 2",
+          "pts": 50,
+          "type": "special"
+        },
+        {
+          "id": "lore_hp_battle_magic",
+          "name": "Battle Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_hp_illusion",
+          "name": "Illusion",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "lore_hp_lore_of_the_wilds",
+          "name": "Lore of the Wilds",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        }
+      ],
+      "notes": "Eonir Narrative Campaign — Kult of Kul Anar. May join Daedilae's Guard, Cult Acolytes, and Wardancers freely."
+    },
+    {
       "id": "we_glade_guard",
       "name": "Glade Guard",
       "category": "Core",
@@ -730,11 +1829,10 @@
       ],
       "equipment": [
         "Hand Weapon",
-        "Asrai Longbow (R32\", AB1, Volley Fire)"
+        "Asrai Longbow (R32\", AP 1, AB1, Volley Fire)"
       ],
       "specialRules": [
-        "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)"
+        "Elven Reflexes"
       ],
       "upgrades": [
         {
@@ -748,7 +1846,13 @@
           "id": "std",
           "name": "Standard Bearer",
           "pts": 6,
-          "type": "command"
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
         },
         {
           "id": "mus",
@@ -803,7 +1907,6 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
         "Martial Prowess",
         "Parry"
       ],
@@ -818,7 +1921,13 @@
           "id": "std",
           "name": "Standard Bearer",
           "pts": 6,
-          "type": "command"
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
         },
         {
           "id": "mus",
@@ -867,6 +1976,12 @@
           "name": "Branch Nymph",
           "pts": 6,
           "type": "command"
+        },
+        {
+          "id": "forest_sprites",
+          "name": "Forest Sprites",
+          "pts": 15,
+          "type": "special"
         }
       ],
       "notes": "Forest Sprites."
@@ -913,7 +2028,6 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
         "Fast Cavalry"
       ],
       "upgrades": [
@@ -924,10 +2038,16 @@
           "type": "command"
         },
         {
-          "id": "std",
+          "id": "gr_std",
           "name": "Standard Bearer",
-          "pts": 6,
-          "type": "command"
+          "pts": 10,
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
         },
         {
           "id": "mus",
@@ -940,6 +2060,27 @@
           "name": "Spirit of Kurnous",
           "pts": 0,
           "type": "special"
+        },
+        {
+          "id": "gr_ambushers",
+          "name": "Ambushers",
+          "pts": 2,
+          "type": "special",
+          "perModel": true
+        },
+        {
+          "id": "gr_drilled",
+          "name": "Drilled",
+          "pts": 2,
+          "type": "special",
+          "perModel": true
+        },
+        {
+          "id": "gr_reserve",
+          "name": "Reserve Move",
+          "pts": 1,
+          "type": "special",
+          "perModel": true
         }
       ],
       "notes": "Enchanted Arrows."
@@ -968,11 +2109,10 @@
       ],
       "equipment": [
         "Hand Weapon",
-        "Asrai Longbow (R32\", AB1, Volley Fire)"
+        "Asrai Longbow (R32\", AP 1, AB1, Volley Fire)"
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
         "Scouts",
         "Skirmishers"
       ],
@@ -980,6 +2120,24 @@
         {
           "id": "champ",
           "name": "Shadow Sentinel",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "std",
+          "name": "Standard Bearer",
+          "pts": 10,
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
+        },
+        {
+          "id": "mus",
+          "name": "Musician",
           "pts": 6,
           "type": "command"
         }
@@ -1015,7 +2173,6 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
         "Guardians of the Wildwood (+1A & MW2 vs Fear/Terror)"
       ],
       "upgrades": [
@@ -1029,7 +2186,13 @@
           "id": "std",
           "name": "Standard Bearer",
           "pts": 6,
-          "type": "command"
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
         },
         {
           "id": "mus",
@@ -1077,12 +2240,31 @@
         "Dances of Loec",
         "Beguiling Aura",
         "Immune to Psychology",
-        "Skirmishers"
+        "Skirmishers",
+        "Talismanic Tattoos (6+ Ward)"
       ],
       "upgrades": [
         {
           "id": "champ",
           "name": "Bladesinger",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "std",
+          "name": "Standard Bearer",
+          "pts": 10,
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
+        },
+        {
+          "id": "mus",
+          "name": "Musician",
           "pts": 6,
           "type": "command"
         }
@@ -1129,6 +2311,12 @@
           "name": "Tree Kin Elder",
           "pts": 6,
           "type": "command"
+        },
+        {
+          "id": "forest_sprites",
+          "name": "Forest Sprites",
+          "pts": 15,
+          "type": "special"
         }
       ],
       "notes": "Forest Sprites."
@@ -1178,7 +2366,7 @@
         "Talismanic Tattoos (6+ Ward)",
         "Fast Cavalry",
         "Frenzy",
-        "Devastating Charge"
+        "Furious Charge (+1A on charge)"
       ],
       "upgrades": [
         {
@@ -1191,7 +2379,13 @@
           "id": "std",
           "name": "Standard Bearer",
           "pts": 6,
-          "type": "command"
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
         },
         {
           "id": "mus",
@@ -1265,7 +2459,13 @@
           "id": "std",
           "name": "Standard Bearer",
           "pts": 6,
-          "type": "command"
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
         },
         {
           "id": "mus",
@@ -1318,7 +2518,6 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
         "Fly (2)",
         "Killing Blow (on charge)"
       ],
@@ -1368,7 +2567,6 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
         "Martial Prowess"
       ],
       "upgrades": [
@@ -1382,7 +2580,13 @@
           "id": "std",
           "name": "Standard Bearer",
           "pts": 6,
-          "type": "command"
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "slots": [
+              "banners"
+            ]
+          }
         },
         {
           "id": "mus",
@@ -1417,22 +2621,45 @@
       ],
       "equipment": [
         "Hand Weapon",
-        "Asrai Longbow (R32\", AB1, Volley Fire)"
+        "Asrai Longbow (R32\", AP 1, AB1, Volley Fire)"
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
+        "Evasive",
+        "Feigned Flight",
+        "Fire & Flee",
+        "Ignores Cover",
+        "Move Through Cover",
         "Scouts",
-        "Skirmishers",
-        "Sniper",
-        "Multiple Shots (2)"
+        "Skirmishers"
       ],
       "upgrades": [
         {
-          "id": "champ",
-          "name": "Shadow Sentinel",
+          "id": "ww_champ",
+          "name": "Sentinel",
           "pts": 6,
           "type": "command"
+        },
+        {
+          "id": "ww_ambushers",
+          "name": "Ambushers",
+          "pts": 1,
+          "type": "special",
+          "perModel": true
+        },
+        {
+          "id": "ww_vanguard",
+          "name": "Vanguard",
+          "pts": 1,
+          "type": "special",
+          "perModel": true
+        },
+        {
+          "id": "ww_veteran",
+          "name": "Veteran",
+          "pts": 1,
+          "type": "special",
+          "perModel": true
         }
       ],
       "notes": "Enchanted Arrows."
@@ -1472,6 +2699,14 @@
         "Large Target",
         "Terror",
         "Stubborn"
+      ],
+      "upgrades": [
+        {
+          "id": "forest_sprites",
+          "name": "Forest Sprites",
+          "pts": 15,
+          "type": "special"
+        }
       ],
       "notes": "Forest Sprites."
     },
