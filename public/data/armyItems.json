@@ -2321,7 +2321,7 @@
       ],
       "note": "Renegade Crowns draws from Empire of Man and Kingdom of Bretonnia item lists"
     },
-    "cythranai": {
+    "eonir": {
       "displayName": "Cythranai (Eonir)",
       "inheritsFrom": [
         "woodElves",
