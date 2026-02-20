@@ -4141,11 +4141,517 @@
       "specialRules": []
     }
   ],
+ {
   "borderPrinces": [
+    {
+      "id": "duke",
+      "name": "Duke",
+      "category": "Characters",
+      "ptsCost": 175,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [
+        "Hand weapon",
+        "Morning star",
+        "Great weapon",
+        "Lance",
+        "Heavy armour"
+      ],
+      "specialRules": [
+        "Blessings of the Lady",
+        "Rallying Cry",
+        "The Grail Vow"
+      ],
+      "upgrades": [
+        {
+          "id": "general",
+          "name": "General",
+          "pts": 0,
+          "type": "command"
+        },
+        {
+          "id": "shield",
+          "name": "Shield",
+          "pts": 2,
+          "type": "equipment"
+        },
+        {
+          "id": "mount_bretonnian_warhorse",
+          "name": "Bretonnian Warhorse",
+          "pts": 16,
+          "type": "mount"
+        },
+        {
+          "id": "mount_barded_pegasus",
+          "name": "Barded Pegasus",
+          "pts": 30,
+          "type": "mount"
+        },
+        {
+          "id": "mount_royal_pegasus",
+          "name": "Royal Pegasus",
+          "pts": 70,
+          "type": "mount"
+        },
+        {
+          "id": "mount_hippogryph",
+          "name": "Hippogryph",
+          "pts": 120,
+          "type": "mount"
+        }
+      ]
+    },
+    {
+      "id": "baron",
+      "name": "Baron",
+      "category": "Characters",
+      "ptsCost": 100,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [
+        "Hand weapon",
+        "Morning star",
+        "Great weapon",
+        "Lance",
+        "Heavy armour"
+      ],
+      "specialRules": [
+        "Blessings of the Lady",
+        "Rallying Cry",
+        "The Knight's Vow"
+      ],
+      "upgrades": [
+        {
+          "id": "general",
+          "name": "General",
+          "pts": 0,
+          "type": "command"
+        },
+        {
+          "id": "shield",
+          "name": "Shield",
+          "pts": 2,
+          "type": "equipment"
+        },
+        {
+          "id": "the_questing_vow",
+          "name": "The Questing Vow",
+          "pts": 15,
+          "type": "equipment"
+        },
+        {
+          "id": "the_grail_vow",
+          "name": "The Grail Vow",
+          "pts": 20,
+          "type": "equipment"
+        },
+        {
+          "id": "the_exiles_vow_replaces_the_knights_vow",
+          "name": "The Exile's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "the_crusaders_vow_replaces_the_knights_vow",
+          "name": "The Crusader's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "mount_bretonnian_warhorse",
+          "name": "Bretonnian Warhorse",
+          "pts": 16,
+          "type": "mount"
+        },
+        {
+          "id": "mount_barded_pegasus",
+          "name": "Barded Pegasus",
+          "pts": 30,
+          "type": "mount"
+        },
+        {
+          "id": "mount_royal_pegasus",
+          "name": "Royal Pegasus",
+          "pts": 70,
+          "type": "mount"
+        },
+        {
+          "id": "mount_hippogryph",
+          "name": "Hippogryph",
+          "pts": 120,
+          "type": "mount"
+        }
+      ]
+    },
+    {
+      "id": "prophetess",
+      "name": "Prophetess",
+      "category": "Characters",
+      "ptsCost": 135,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [
+        "Hand weapon"
+      ],
+      "specialRules": [
+        "Aura of the Lady",
+        "Blessings of the Lady",
+        "Lore of the Lady",
+        "Magical Attacks",
+        "Magic Resistance (-2)",
+        "Shield of the Lady"
+      ],
+      "upgrades": [
+        {
+          "id": "general",
+          "name": "General",
+          "pts": 0,
+          "type": "command"
+        },
+        {
+          "id": "wizard",
+          "name": "Wizard",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "mount_warhorse_{bretonnia}",
+          "name": "Warhorse {bretonnia}",
+          "pts": 12,
+          "type": "mount"
+        },
+        {
+          "id": "mount_bretonnian_warhorse",
+          "name": "Bretonnian Warhorse",
+          "pts": 16,
+          "type": "mount"
+        },
+        {
+          "id": "mount_unicorn",
+          "name": "Unicorn",
+          "pts": 35,
+          "type": "mount"
+        },
+        {
+          "id": "mount_royal_pegasus",
+          "name": "Royal Pegasus",
+          "pts": 70,
+          "type": "mount"
+        }
+      ]
+    },
+    {
+      "id": "paladin",
+      "name": "Paladin",
+      "category": "Characters",
+      "ptsCost": 60,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [
+        "Hand weapon",
+        "Morning star",
+        "Great weapon",
+        "Lance",
+        "Heavy armour"
+      ],
+      "specialRules": [
+        "Blessings of the Lady",
+        "Rallying Cry",
+        "The Knight's Vow"
+      ],
+      "upgrades": [
+        {
+          "id": "general",
+          "name": "General",
+          "pts": 0,
+          "type": "command"
+        },
+        {
+          "id": "battle_standard_bearer",
+          "name": "Battle Standard Bearer",
+          "pts": 0,
+          "type": "command",
+          "magic": {
+            "types": [
+              "banner"
+            ],
+            "maxPoints": 0
+          }
+        },
+        {
+          "id": "shield",
+          "name": "Shield",
+          "pts": 2,
+          "type": "equipment"
+        },
+        {
+          "id": "the_questing_vow",
+          "name": "The Questing Vow",
+          "pts": 15,
+          "type": "equipment"
+        },
+        {
+          "id": "the_grail_vow",
+          "name": "The Grail Vow",
+          "pts": 20,
+          "type": "equipment"
+        },
+        {
+          "id": "the_exiles_vow_replaces_the_knights_vow",
+          "name": "The Exile's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "the_crusaders_vow_replaces_the_knights_vow",
+          "name": "The Crusader's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "mount_bretonnian_warhorse",
+          "name": "Bretonnian Warhorse",
+          "pts": 16,
+          "type": "mount"
+        },
+        {
+          "id": "mount_barded_pegasus",
+          "name": "Barded Pegasus",
+          "pts": 30,
+          "type": "mount"
+        },
+        {
+          "id": "mount_royal_pegasus",
+          "name": "Royal Pegasus",
+          "pts": 70,
+          "type": "mount"
+        }
+      ]
+    },
+    {
+      "id": "damsel",
+      "name": "Damsel",
+      "category": "Characters",
+      "ptsCost": 60,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [
+        "Hand weapon"
+      ],
+      "specialRules": [
+        "Aura of the Lady",
+        "Blessings of the Lady",
+        "Lore of the Lady",
+        "Magical Attacks",
+        "Magic Resistance (-2)",
+        "Shield of the Lady"
+      ],
+      "upgrades": [
+        {
+          "id": "general",
+          "name": "General",
+          "pts": 0,
+          "type": "command"
+        },
+        {
+          "id": "wizard",
+          "name": "Wizard",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "mount_warhorse_{bretonnia}",
+          "name": "Warhorse {bretonnia}",
+          "pts": 12,
+          "type": "mount"
+        },
+        {
+          "id": "mount_bretonnian_warhorse",
+          "name": "Bretonnian Warhorse",
+          "pts": 16,
+          "type": "mount"
+        },
+        {
+          "id": "mount_unicorn",
+          "name": "Unicorn",
+          "pts": 35,
+          "type": "mount"
+        }
+      ]
+    },
+    {
+      "id": "sergeant_at_arms",
+      "name": "Sergeant-at-Arms",
+      "category": "Characters",
+      "ptsCost": 45,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [
+        "Hand weapon",
+        "Halberd",
+        "Additional hand weapon",
+        "Cavalry spear",
+        "Light armour"
+      ],
+      "specialRules": [
+        "Levies",
+        "Peasant's Duty",
+        "Peasantry",
+        "Warband"
+      ],
+      "upgrades": [
+        {
+          "id": "general",
+          "name": "General",
+          "pts": 0,
+          "type": "command"
+        },
+        {
+          "id": "shield",
+          "name": "Shield",
+          "pts": 2,
+          "type": "equipment"
+        },
+        {
+          "id": "mount_warhorse_{bretonnia}",
+          "name": "Warhorse {bretonnia}",
+          "pts": 12,
+          "type": "mount"
+        }
+      ]
+    },
+    {
+      "id": "outcast_wizard",
+      "name": "Outcast Wizard",
+      "category": "Characters",
+      "ptsCost": 45,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [
+        "Hand weapon"
+      ],
+      "specialRules": [
+        "Magical Attacks",
+        "Magic Resistance (-1)",
+        "Untutored Arcanist"
+      ],
+      "upgrades": [
+        {
+          "id": "general",
+          "name": "General",
+          "pts": 0,
+          "type": "command"
+        },
+        {
+          "id": "wizard",
+          "name": "Wizard",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "mount_warhorse_{bretonnia}",
+          "name": "Warhorse {bretonnia}",
+          "pts": 12,
+          "type": "mount"
+        }
+      ]
+    },
+    {
+      "id": "the_green_knight",
+      "name": "The Green Knight",
+      "category": "Characters",
+      "ptsCost": 275,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [
+        "The Dolorous Blade",
+        "Heavy armour, Shield, Barding"
+      ],
+      "specialRules": [
+        "Aura of the Fay",
+        "Blessed Knight",
+        "Ethereal",
+        "Guardian of the Sacred Sites",
+        "Immune to Psychology",
+        "Loner",
+        "Move Through Cover",
+        "Rallying Cry",
+        "Terror",
+        "Unbreakable",
+        "Unstable"
+      ],
+      "upgrades": []
+    },
+    {
+      "id": "sir_cecil_gastonne_the_wyrm_slayer",
+      "name": "Sir Cecil Gastonne",
+      "category": "Characters",
+      "ptsCost": 165,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [
+        "Sorrow's End",
+        "Dragonhide Cloak, Heavy armour, Shield"
+      ],
+      "specialRules": [
+        "Blessings of the Lady",
+        "Rallying Cry",
+        "The Wyrm Slayer",
+        "The Exile's Vow"
+      ],
+      "upgrades": [
+        {
+          "id": "general",
+          "name": "General",
+          "pts": 0,
+          "type": "command"
+        }
+      ]
+    },
+    {
+      "id": "lady_élisse_duachaard",
+      "name": "Lady Élisse Duchaard",
+      "category": "Characters",
+      "ptsCost": 225,
+      "isCharacter": true,
+      "profiles": [],
+      "equipment": [
+        "Hand weapon, Chalice of Brionne, The Staff of the Elements"
+      ],
+      "specialRules": [
+        "Arcane Backlash",
+        "Armour Bane (2 - Ariandir only)",
+        "Armoured Hide (1)",
+        "Aura of the Lady",
+        "Beguiling Aura",
+        "Blessings of the Lady",
+        "Counter Charge",
+        "Lore of the Lady",
+        "Magical Attacks",
+        "Magic Resistance (-2)",
+        "Shield of the Lady",
+        "Stomp Attacks (1)",
+        "Swiftstride"
+      ],
+      "upgrades": [
+        {
+          "id": "general",
+          "name": "General",
+          "pts": 0,
+          "type": "command"
+        },
+        {
+          "id": "wizard",
+          "name": "Wizard",
+          "pts": 0,
+          "type": "equipment"
+        }
+      ]
+    },
     {
       "id": "renegade_prince",
       "name": "Renegade Prince",
-      "category": "Lords",
+      "category": "Characters",
       "ptsCost": 75,
       "isCharacter": true,
       "profiles": [
@@ -4163,68 +4669,13 @@
         }
       ],
       "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "damsel",
-      "name": "Damsel",
-      "category": "Heroes",
-      "ptsCost": 60,
-      "isCharacter": true,
-      "profiles": [
-        {
-          "name": "Damsel",
-          "M": 4,
-          "WS": 3,
-          "BS": 3,
-          "S": 3,
-          "T": 3,
-          "W": 2,
-          "I": 3,
-          "A": 1,
-          "Ld": 7
-        }
-      ],
-      "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "outcast_wizard",
-      "name": "Outcast Wizard",
-      "category": "Heroes",
-      "ptsCost": 45,
-      "isCharacter": true,
-      "profiles": [],
-      "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "paladin",
-      "name": "Paladin",
-      "category": "Heroes",
-      "ptsCost": 60,
-      "isCharacter": true,
-      "profiles": [
-        {
-          "name": "Paladin",
-          "M": 4,
-          "WS": 6,
-          "BS": 3,
-          "S": 4,
-          "T": 4,
-          "W": 2,
-          "I": 4,
-          "A": 3,
-          "Ld": 8
-        }
-      ],
-      "equipment": [],
-      "specialRules": []
+      "specialRules": [],
+      "upgrades": []
     },
     {
       "id": "renegade_captain",
       "name": "Renegade Captain",
-      "category": "Heroes",
+      "category": "Characters",
       "ptsCost": 35,
       "isCharacter": true,
       "profiles": [
@@ -4242,30 +4693,393 @@
         }
       ],
       "equipment": [],
-      "specialRules": []
+      "specialRules": [],
+      "upgrades": []
     },
     {
-      "id": "sergeants_at_arms",
-      "name": "Sergeants-At-Arms",
-      "category": "Heroes",
-      "ptsCost": 45,
-      "isCharacter": true,
-      "profiles": [
-        {
-          "name": "Sargent-At-Arms",
-          "M": 4,
-          "WS": 4,
-          "BS": 2,
-          "S": 4,
-          "T": 3,
-          "W": 2,
-          "I": 4,
-          "A": 2,
-          "Ld": 7
-        }
+      "id": "men_at_arms",
+      "name": "Men-at-Arms",
+      "category": "Core",
+      "ptsPerModel": 4,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Polearms, Shields",
+        "Light armour"
       ],
-      "equipment": [],
-      "specialRules": []
+      "specialRules": [
+        "Close Order",
+        "Horde",
+        "Levies",
+        "Peasantry",
+        "Shieldwall",
+        "Warband"
+      ],
+      "upgrades": [
+        {
+          "id": "yeoman_champion",
+          "name": "Yeoman (champion)",
+          "pts": 7,
+          "type": "command"
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "grail_monk",
+          "name": "Grail Monk",
+          "pts": 7,
+          "type": "command"
+        }
+      ]
+    },
+    {
+      "id": "peasant_bowmen",
+      "name": "Peasant Bowmen",
+      "category": "Core",
+      "ptsPerModel": 5,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Longbows",
+        "No armour",
+        "Light armour"
+      ],
+      "specialRules": [
+        "Close Order",
+        "Levies",
+        "Peasantry"
+      ],
+      "upgrades": [
+        {
+          "id": "villein_champion",
+          "name": "Villein (champion)",
+          "pts": 7,
+          "type": "command"
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "defensive_stakes",
+          "name": "Defensive Stakes",
+          "pts": 10,
+          "type": "equipment"
+        },
+        {
+          "id": "burning_braziers",
+          "name": "Burning Braziers",
+          "pts": 20,
+          "type": "equipment"
+        },
+        {
+          "id": "skirmishers",
+          "name": "Skirmishers",
+          "pts": 0,
+          "type": "equipment"
+        }
+      ]
+    },
+    {
+      "id": "knights_of_the_realm",
+      "name": "Knights of the Realm on Foot",
+      "category": "Core",
+      "ptsPerModel": 11,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Shields",
+        "Hand weapons, Great weapons",
+        "Hand weapons, Great weapons, Shields"
+      ],
+      "specialRules": [
+        "Blessings of the Lady",
+        "Close Order",
+        "Furious Charge",
+        "The Knight's Vow"
+      ],
+      "upgrades": [
+        {
+          "id": "first_knight_champion",
+          "name": "First Knight (champion)",
+          "pts": 6,
+          "type": "command",
+          "magic": {
+            "maxPoints": 25,
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ]
+          }
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 6,
+          "type": "command",
+          "magic": {
+            "maxPoints": 25,
+            "types": [
+              "banner"
+            ]
+          }
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "the_exiles_vow_replaces_the_knights_vow",
+          "name": "The Exile's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "the_crusaders_vow_replaces_the_knights_vow",
+          "name": "The Crusader's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        }
+      ]
+    },
+    {
+      "id": "mounted_knights_of_the_realm",
+      "name": "Mounted Knights of the Realm",
+      "category": "Core",
+      "ptsPerModel": 24,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Lances, Shields",
+        "Heavy armour, Barding"
+      ],
+      "specialRules": [
+        "Blessings of the Lady",
+        "Close Order",
+        "Counter Charge",
+        "Finest Warhorses",
+        "First Charge",
+        "Lance Formation",
+        "Swiftstride",
+        "The Knight's Vow"
+      ],
+      "upgrades": [
+        {
+          "id": "first_knight_champion",
+          "name": "First Knight (champion)",
+          "pts": 7,
+          "type": "command",
+          "magic": {
+            "maxPoints": 25,
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ]
+          }
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 7,
+          "type": "command",
+          "magic": {
+            "maxPoints": 25,
+            "types": [
+              "banner"
+            ]
+          }
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 7,
+          "type": "command"
+        },
+        {
+          "id": "the_exiles_vow_replaces_the_knights_vow",
+          "name": "The Exile's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "the_crusaders_vow_replaces_the_knights_vow",
+          "name": "The Crusader's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        }
+      ]
+    },
+    {
+      "id": "knights_errant",
+      "name": "Knights Errant",
+      "category": "Core",
+      "ptsPerModel": 19,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Lances, Shields",
+        "Heavy armour, Barding"
+      ],
+      "specialRules": [
+        "Blessings of the Lady",
+        "Close Order",
+        "Finest Warhorses",
+        "First Charge",
+        "Impetuous",
+        "Lance Formation",
+        "Swiftstride",
+        "The Knight's Vow"
+      ],
+      "upgrades": [
+        {
+          "id": "gallant_champion",
+          "name": "Gallant (champion)",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 6,
+          "type": "command",
+          "magic": {
+            "maxPoints": 25,
+            "types": [
+              "banner"
+            ]
+          }
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "the_exiles_vow_replaces_the_knights_vow",
+          "name": "The Exile's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "the_crusaders_vow_replaces_the_knights_vow",
+          "name": "The Crusader's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        }
+      ]
+    },
+    {
+      "id": "yeoman_guard",
+      "name": "Yeomen Guard",
+      "category": "Core",
+      "ptsPerModel": 5,
+      "minSize": 10,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Halberds",
+        "Hand weapons, Polearms",
+        "Hand weapons, Thrusting spears",
+        "Light armour, Shields"
+      ],
+      "specialRules": [
+        "Close Order",
+        "Horde",
+        "Peasantry",
+        "Shieldwall",
+        "Veteran",
+        "Warband"
+      ],
+      "upgrades": [
+        {
+          "id": "warden_champion",
+          "name": "Warden (champion)",
+          "pts": 6,
+          "type": "command"
+        },
+        {
+          "id": "grail_monk",
+          "name": "Grail Monk",
+          "pts": 7,
+          "type": "command"
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 6,
+          "type": "command",
+          "magic": {
+            "types": [
+              "banner"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 6,
+          "type": "command"
+        }
+      ]
+    },
+    {
+      "id": "battle_pilgrims",
+      "name": "Battle Pilgrims",
+      "category": "Core",
+      "ptsPerModel": 6,
+      "minSize": 5,
+      "maxSize": 30,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Shields",
+        "Light armour"
+      ],
+      "specialRules": [
+        "Close Order",
+        "Hatred (all enemies)",
+        "Levies",
+        "Peasantry",
+        "Stubborn"
+      ],
+      "upgrades": [
+        {
+          "id": "grail_reliquae",
+          "name": "Grail Reliquae",
+          "pts": 65,
+          "type": "command"
+        }
+      ]
     },
     {
       "id": "freeblade_knights",
@@ -4289,7 +5103,8 @@
         }
       ],
       "equipment": [],
-      "specialRules": []
+      "specialRules": [],
+      "upgrades": []
     },
     {
       "id": "hireling_outriders",
@@ -4325,158 +5140,8 @@
         }
       ],
       "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "knights_errant",
-      "name": "Knights Errant",
-      "category": "Core",
-      "ptsPerModel": 19,
-      "minSize": 5,
-      "maxSize": 99,
-      "profiles": [
-        {
-          "name": "Bretonnian Warhorse",
-          "M": 8,
-          "WS": 3,
-          "BS": "-",
-          "S": 3,
-          "T": "-",
-          "W": "-",
-          "I": 3,
-          "A": 1,
-          "Ld": "-"
-        },
-        {
-          "name": "Knight Errant",
-          "M": "-",
-          "WS": 3,
-          "BS": 2,
-          "S": 3,
-          "T": 3,
-          "W": 1,
-          "I": 3,
-          "A": 1,
-          "Ld": 7
-        }
-      ],
-      "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "knights_of_the_realm_on_foot",
-      "name": "Knights of the Realm on Foot",
-      "category": "Core",
-      "ptsPerModel": 11,
-      "minSize": 5,
-      "maxSize": 99,
-      "profiles": [
-        {
-          "name": "Knight of the Realm",
-          "M": 4,
-          "WS": 4,
-          "BS": 2,
-          "S": 3,
-          "T": 3,
-          "W": 1,
-          "I": 3,
-          "A": 1,
-          "Ld": 8
-        }
-      ],
-      "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "men_at_arms",
-      "name": "Men-At-Arms",
-      "category": "Core",
-      "ptsPerModel": 4,
-      "minSize": 10,
-      "maxSize": 99,
-      "profiles": [
-        {
-          "name": "Man-at-Arms",
-          "M": 4,
-          "WS": 2,
-          "BS": 2,
-          "S": 3,
-          "T": 3,
-          "W": 1,
-          "I": 3,
-          "A": 1,
-          "Ld": 5
-        }
-      ],
-      "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "mounted_knights_of_the_realm",
-      "name": "Mounted Knights of the Realm",
-      "category": "Core",
-      "ptsPerModel": 24,
-      "minSize": 5,
-      "maxSize": 99,
-      "profiles": [
-        {
-          "name": "Bretonnian Warhorse",
-          "M": 8,
-          "WS": 3,
-          "BS": "-",
-          "S": 3,
-          "T": "-",
-          "W": "-",
-          "I": 3,
-          "A": 1,
-          "Ld": "-"
-        },
-        {
-          "name": "Mounted Knight of the Realm",
-          "M": "-",
-          "WS": 4,
-          "BS": 2,
-          "S": 3,
-          "T": 3,
-          "W": 1,
-          "I": 3,
-          "A": 1,
-          "Ld": 8
-        }
-      ],
-      "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "peasant_bowmen",
-      "name": "Peasant Bowmen",
-      "category": "Core",
-      "ptsPerModel": 5,
-      "minSize": 10,
-      "maxSize": 99,
-      "profiles": [
-        {
-          "name": "Peasant Bowman",
-          "M": 4,
-          "WS": 2,
-          "BS": 3,
-          "S": 3,
-          "T": 3,
-          "W": 1,
-          "I": 3,
-          "A": 1,
-          "Ld": 7
-        }
-      ],
-      "equipment": [
-        "Burning Braziers",
-        "Defensive Stakes",
-        "Skirmishers"
-      ],
-      "specialRules": [
-        "Burning Braziers",
-        "Defensive Stakes"
-      ]
+      "specialRules": [],
+      "upgrades": []
     },
     {
       "id": "sellswords",
@@ -4500,7 +5165,8 @@
         }
       ],
       "equipment": [],
-      "specialRules": []
+      "specialRules": [],
+      "upgrades": []
     },
     {
       "id": "veteran_sellswords",
@@ -4524,7 +5190,234 @@
         }
       ],
       "equipment": [],
-      "specialRules": []
+      "specialRules": [],
+      "upgrades": []
+    },
+    {
+      "id": "questing_knights",
+      "name": "Questing Knights",
+      "category": "Special",
+      "ptsPerModel": 26,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Great weapons, Shields",
+        "Heavy armour, Barding"
+      ],
+      "specialRules": [
+        "Blessings of the Lady",
+        "Close Order",
+        "Finest Warhorses",
+        "First Charge",
+        "Lance Formation",
+        "Swiftstride",
+        "the Questing Vow"
+      ],
+      "upgrades": [
+        {
+          "id": "paragon_champion",
+          "name": "Paragon (champion)",
+          "pts": 7,
+          "type": "command",
+          "magic": {
+            "maxPoints": 25,
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ]
+          }
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 7,
+          "type": "command",
+          "magic": {
+            "maxPoints": 100,
+            "types": [
+              "banner"
+            ]
+          }
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 7,
+          "type": "command"
+        }
+      ]
+    },
+    {
+      "id": "pegasus_knights",
+      "name": "Pegasus Knights",
+      "category": "Special",
+      "ptsPerModel": 59,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapon, Lances, Shields",
+        "Heavy armour, Barding"
+      ],
+      "specialRules": [
+        "Blessings of the Lady",
+        "Counter Charge",
+        "Dispersed Formation",
+        "First Charge",
+        "Fly (10)",
+        "Furious Charge (Pegasus Knights & First Knight only)",
+        "Skirmishers",
+        "Swiftstride",
+        "The Knight's Vow"
+      ],
+      "upgrades": [
+        {
+          "id": "first_knight_champion",
+          "name": "First Knight (champion)",
+          "pts": 7,
+          "type": "command"
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 7,
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "types": [
+              "banner"
+            ]
+          }
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 7,
+          "type": "command"
+        },
+        {
+          "id": "the_exiles_vow_replaces_the_knights_vow",
+          "name": "The Exile's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "the_crusaders_vow_replaces_the_knights_vow",
+          "name": "The Crusader's Vow (replaces the Knight's Vow)",
+          "pts": 0,
+          "type": "equipment"
+        }
+      ]
+    },
+    {
+      "id": "mounted_yeomen",
+      "name": "Mounted Yeomen",
+      "category": "Special",
+      "ptsPerModel": 13,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Cavalry spears, Shortbows",
+        "No armour",
+        "Light armour"
+      ],
+      "specialRules": [
+        "Fast Cavalry",
+        "Fire & Flee",
+        "Levies",
+        "Open Order",
+        "Peasantry",
+        "Reserve Move",
+        "Skirmishers",
+        "Swiftstride"
+      ],
+      "upgrades": [
+        {
+          "id": "warden_champion",
+          "name": "Warden (champion)",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "shields",
+          "name": "Shields",
+          "pts": 1,
+          "type": "equipment"
+        },
+        {
+          "id": "feigned_flight",
+          "name": "Feigned Flight",
+          "pts": 2,
+          "type": "equipment"
+        }
+      ]
+    },
+    {
+      "id": "squires",
+      "name": "Squires",
+      "category": "Special",
+      "ptsPerModel": 7,
+      "minSize": 5,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Longbows"
+      ],
+      "specialRules": [
+        "Move Through Cover",
+        "Open Order",
+        "Peasantry",
+        "Skirmishers",
+        "Vanguard"
+      ],
+      "upgrades": [
+        {
+          "id": "esquire_champion",
+          "name": "Esquire (champion)",
+          "pts": 7,
+          "type": "command"
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "fire_&_flee",
+          "name": "Fire & Flee",
+          "pts": 1,
+          "type": "equipment"
+        },
+        {
+          "id": "scouts",
+          "name": "Scouts",
+          "pts": 1,
+          "type": "equipment"
+        }
+      ]
     },
     {
       "id": "battle_pilgrims_and_grail_reliquae",
@@ -4560,7 +5453,8 @@
         }
       ],
       "equipment": [],
-      "specialRules": []
+      "specialRules": [],
+      "upgrades": []
     },
     {
       "id": "border_princes_mortar",
@@ -4584,103 +5478,8 @@
         }
       ],
       "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "mounted_yeomen",
-      "name": "Mounted Yeomen",
-      "category": "Special",
-      "ptsPerModel": 13,
-      "minSize": 5,
-      "maxSize": 99,
-      "profiles": [
-        {
-          "name": "Warhorse",
-          "M": 8,
-          "WS": 3,
-          "BS": "-",
-          "S": 3,
-          "T": "-",
-          "W": "-",
-          "I": 3,
-          "A": 1,
-          "Ld": "-"
-        },
-        {
-          "name": "Mounted Yeomen",
-          "M": "-",
-          "WS": 3,
-          "BS": 3,
-          "S": 3,
-          "T": 3,
-          "W": 1,
-          "I": 3,
-          "A": 1,
-          "Ld": 6
-        }
-      ],
-      "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "questing_knights",
-      "name": "Questing Knights",
-      "category": "Special",
-      "ptsPerModel": 26,
-      "minSize": 3,
-      "maxSize": 99,
-      "profiles": [
-        {
-          "name": "Bretonnian Warhorse",
-          "M": 8,
-          "WS": 3,
-          "BS": "-",
-          "S": 3,
-          "T": "-",
-          "W": "-",
-          "I": 3,
-          "A": 1,
-          "Ld": "-"
-        },
-        {
-          "name": "Questing Knight",
-          "M": "-",
-          "WS": 5,
-          "BS": 2,
-          "S": 4,
-          "T": 3,
-          "W": 1,
-          "I": 4,
-          "A": 1,
-          "Ld": 8
-        }
-      ],
-      "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "squires",
-      "name": "Squires",
-      "category": "Special",
-      "ptsPerModel": 7,
-      "minSize": 5,
-      "maxSize": 99,
-      "profiles": [
-        {
-          "name": "Squire",
-          "M": 4,
-          "WS": 3,
-          "BS": 3,
-          "S": 3,
-          "T": 3,
-          "W": 1,
-          "I": 3,
-          "A": 1,
-          "Ld": 7
-        }
-      ],
-      "equipment": [],
-      "specialRules": []
+      "specialRules": [],
+      "upgrades": []
     },
     {
       "id": "veteran_freeblade",
@@ -4704,18 +5503,201 @@
         }
       ],
       "equipment": [],
-      "specialRules": []
+      "specialRules": [],
+      "upgrades": []
     },
     {
-      "id": "border_princes_brigands",
-      "name": "Border Princes Brigands",
+      "id": "grail_knights",
+      "name": "Grail Knights",
+      "category": "Rare",
+      "ptsPerModel": 38,
+      "minSize": 3,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Hand weapons, Lances, Shields",
+        "Heavy armour, Barding"
+      ],
+      "specialRules": [
+        "Blessings of the Lady",
+        "Close Order",
+        "Counter Charge",
+        "Finest Warhorses",
+        "First Charge",
+        "Lance Formation",
+        "Living Saints",
+        "Swiftstride",
+        "The Grail Vow"
+      ],
+      "upgrades": [
+        {
+          "id": "grail_guardian_champion",
+          "name": "Grail Guardian (champion)",
+          "pts": 7,
+          "type": "command",
+          "magic": {
+            "maxPoints": 50,
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ]
+          }
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 7,
+          "type": "command",
+          "magic": {
+            "maxPoints": 100,
+            "types": [
+              "banner"
+            ]
+          }
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 7,
+          "type": "command"
+        }
+      ]
+    },
+    {
+      "id": "field_trebuchet",
+      "name": "Field Trebuchet",
+      "category": "Rare",
+      "ptsPerModel": 100,
+      "minSize": 1,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Field Trebuchet, Hand weapons"
+      ],
+      "specialRules": [
+        "Levies",
+        "Peasantry",
+        "Skirmishers"
+      ],
+      "upgrades": []
+    },
+    {
+      "id": "sontrailles_brigands",
+      "name": "Sontrailles Brigands",
       "category": "Rare",
       "ptsPerModel": 4,
       "minSize": 10,
       "maxSize": 99,
       "profiles": [],
-      "equipment": [],
-      "specialRules": []
+      "equipment": [
+        "Hand weapons",
+        "Light armour"
+      ],
+      "specialRules": [
+        "Horde",
+        "Impetuous",
+        "Levies",
+        "Motley Crew",
+        "Open Order",
+        "Warband"
+      ],
+      "upgrades": [
+        {
+          "id": "desperado_champion",
+          "name": "Desperado (champion)",
+          "pts": 7,
+          "type": "command",
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "id": "standard_bearer",
+          "name": "Standard bearer",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "musician",
+          "name": "Musician",
+          "pts": 5,
+          "type": "command"
+        },
+        {
+          "id": "additional_hand_weapon",
+          "name": "Additional hand weapon",
+          "pts": 2,
+          "type": "equipment"
+        },
+        {
+          "id": "shields",
+          "name": "Shields",
+          "pts": 1,
+          "type": "equipment"
+        },
+        {
+          "id": "pistols",
+          "name": "Pistols",
+          "pts": 2,
+          "type": "equipment"
+        },
+        {
+          "id": "blunderbusses",
+          "name": "Blunderbusses",
+          "pts": 4,
+          "type": "equipment"
+        },
+        {
+          "id": "crossbows",
+          "name": "Crossbows",
+          "pts": 3,
+          "type": "equipment"
+        },
+        {
+          "id": "formation",
+          "name": "Formation",
+          "pts": 0,
+          "type": "equipment"
+        },
+        {
+          "id": "ambushers",
+          "name": "Ambushers",
+          "pts": 2,
+          "type": "equipment"
+        },
+        {
+          "id": "scouts",
+          "name": "Scouts",
+          "pts": 1,
+          "type": "equipment"
+        }
+      ]
+    },
+    {
+      "id": "sontrailles_bombard",
+      "name": "Sontrailles Bombard",
+      "category": "Rare",
+      "ptsPerModel": 100,
+      "minSize": 1,
+      "maxSize": 99,
+      "profiles": [],
+      "equipment": [
+        "Bombard, Hand weapons",
+        "Light armour"
+      ],
+      "specialRules": [
+        "Levies",
+        "Skirmishers"
+      ],
+      "upgrades": []
     },
     {
       "id": "border_princes_organ_gun",
@@ -4739,43 +5721,8 @@
         }
       ],
       "equipment": [],
-      "specialRules": []
-    },
-    {
-      "id": "field_trebuchet",
-      "name": "Field Trebuchet",
-      "category": "Rare",
-      "ptsPerModel": 100,
-      "minSize": 1,
-      "maxSize": 1,
-      "profiles": [
-        {
-          "name": "Peasant Crew",
-          "M": 4,
-          "WS": 2,
-          "BS": 2,
-          "S": 3,
-          "T": 3,
-          "W": 4,
-          "I": 3,
-          "A": 4,
-          "Ld": 6
-        },
-        {
-          "name": "Field Trebuchet",
-          "M": "-",
-          "WS": "-",
-          "BS": "-",
-          "S": "-",
-          "T": 7,
-          "W": 3,
-          "I": "-",
-          "A": "-",
-          "Ld": "-"
-        }
-      ],
-      "equipment": [],
-      "specialRules": []
+      "specialRules": [],
+      "upgrades": []
     }
   ]
 }
