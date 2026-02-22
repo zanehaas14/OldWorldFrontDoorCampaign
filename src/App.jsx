@@ -16,6 +16,8 @@ import {
 } from "./lib/driveBackup";
 import { isBsdataEnabled, setBsdataEnabled, clearBsdataCache } from "./lib/bsdataLoader";
 import { isDatasetEnabled, setDatasetEnabled, clearDatasetCache } from "./lib/datasetLoader";
+import GameView from "./GameView";
+import MapView from "./MapView";
 
 // ═══════════════════════════════════════════════════════════════
 // CONSTANTS & HELPERS (data loaded from dataService)
@@ -231,47 +233,76 @@ function unitHasDatasetArrowOptions(unitDef) {
   return unitDef.upgrades.some(u => u.exclusive && ARROW_OPTION_NAMES.has(u.name.toLowerCase()));
 }
 
+// ── Named character magic item budgets ──────────────────────────
+// Add new named characters here; budget 0 = relic only.
+const NAMED_CHAR_BUDGETS = {
+  "gareth":      100, // Glade Lord → Lord tier
+  "daedilae":    100, // High Priestess of Kul Anar → Lord tier
+  "caerwynne":   100, // High Priestess (Shadow Dancer) → Lord tier
+  "rephal":       50, // Khainite Assassin → Hero tier
+  "dûgalathir":    0, // Watcher of the Void — relic only
+  "dugalathir":    0, // ASCII fallback
+  "elenornath":    0, // Watcher of the Stars — relic only
+};
+
+function getNamedCharBudget(unitDef) {
+  const nameLower = (unitDef.name || "").toLowerCase();
+  for (const [key, budget] of Object.entries(NAMED_CHAR_BUDGETS)) {
+    if (nameLower.startsWith(key)) return budget;
+  }
+  return null; // unknown — fall through to generic logic
+}
+
 // Determine which magic item slots a character can access
 function getAllowedSlots(unitDef) {
   if (!unitDef?.isCharacter) return [];
-  // Named characters get no magic items
-  if (unitDef.troopType?.includes("named")) return [];
-  // If unit explicitly defines allowed slots, use those
   if (unitDef.allowedSlots) return unitDef.allowedSlots;
-  // Auto-detect from unit characteristics
+  // Named characters with 0 budget → no slots (relic only)
+  if (unitDef.category === "Named Characters" || unitDef.troopType?.includes("named")) {
+    const budget = getNamedCharBudget(unitDef);
+    if (budget === 0) return [];
+    // budget > 0: fall through to auto-detect
+  }
   const slots = [];
   const notes = (unitDef.notes || "").toLowerCase();
   const rules = (unitDef.specialRules || []).join(" ").toLowerCase();
   const isWizard = rules.includes("wizard") || notes.includes("wizard") || notes.includes("lore");
   const isTreeSpirit = rules.includes("tree spirit");
   const isBSBCapable = notes.includes("bsb") || notes.includes("battle standard");
-  // Everyone who can take magic items gets weapons, talismans, enchanted
   slots.push("weapons", "talismans", "enchanted");
-  // Armour: melee fighters get it, wizards and tree spirits generally don't
-  if (!isWizard && !isTreeSpirit) {
-    slots.push("armour");
-  }
-  // Arcane: wizards only
-  if (isWizard) {
-    slots.push("arcane");
-  }
-  // Banners: BSB capable only
-  if (isBSBCapable) {
-    slots.push("banners");
-  }
+  if (!isWizard && !isTreeSpirit) slots.push("armour");
+  if (isWizard) slots.push("arcane");
+  if (isBSBCapable) slots.push("banners");
   return slots;
 }
 
-// Magic item point limits: Lords 100 pts, Heroes 50 pts (TOW standard)
+// Magic item point limits
 function getMagicItemBudget(unitDef) {
   if (!unitDef?.isCharacter) return 0;
-  if (unitDef.troopType?.includes("named")) return 0;
+  if (unitDef.magicItemBudget != null) return unitDef.magicItemBudget;
   const match = unitDef.notes?.match(/Magic Items?\s*\((\d+)\s*pts?\)/i);
   if (match) return parseInt(match[1]);
-  if (unitDef.magicItemBudget != null) return unitDef.magicItemBudget;
+  if (unitDef.category === "Named Characters" || unitDef.troopType?.includes("named")) {
+    const budget = getNamedCharBudget(unitDef);
+    return budget !== null ? budget : 50; // unknown named char → hero tier default
+  }
   if (unitDef.category === "Lords") return 100;
   if (unitDef.category === "Heroes") return 50;
   return 0;
+}
+
+// Map a relic's type string to its magic item slot
+function getRelicSlot(relic) {
+  if (!relic || relic.name === "TBD") return null;
+  if (relic.slot) return relic.slot;
+  const type = (relic.type || "").toLowerCase();
+  if (/weapon|sword|axe|blade|lance|spear|dagger|bow/.test(type)) return "weapons";
+  if (/armou?r|armor|shield|plate|helm/.test(type)) return "armour";
+  if (/talisman|pendant|locket|charm|amulet/.test(type)) return "talismans";
+  if (/enchanted/.test(type)) return "enchanted";
+  if (/arcane|scroll|wand|staff|rod|orb/.test(type)) return "arcane";
+  if (/banner|standard/.test(type)) return "banners";
+  return "enchanted";
 }
 
 function calcMagicItemsCost(magicItems) {
@@ -380,6 +411,7 @@ function ArmyBuilder({ data, onRefreshData }) {
   const [unitOverrides, setUnitOverrides] = useState({});
   const [customRules, setCustomRules] = useState([]);
   const [view, setView] = useState("roster"); // roster | units | traits | items | rules | data
+  const [showGameView, setShowGameView] = useState(false);
   const [selectedUnit, setSelectedUnit] = useState(null);
   const [showNewUnitForm, setShowNewUnitForm] = useState(false);
   const [showNewListDialog, setShowNewListDialog] = useState(false);
@@ -601,6 +633,19 @@ function ArmyBuilder({ data, onRefreshData }) {
 
   return (
     <div style={styles.appContainer}>
+      {/* ══ Game View Overlay ══ */}
+      {showGameView && currentList && (
+        <GameView
+          currentList={currentList}
+          allUnits={allUnits}
+          faction={faction}
+          activeFaction={activeFaction}
+          totalPoints={totalPoints}
+          onClose={() => setShowGameView(false)}
+          localRulesDesc={SPECIAL_RULES_DESC}
+        />
+      )}
+
       {/* ══ Notification ══ */}
       {notification && (
         <div style={styles.notification}>{notification}</div>
@@ -659,6 +704,7 @@ function ArmyBuilder({ data, onRefreshData }) {
           { key: "roster", label: "Army Roster", icon: "📜" },
           { key: "units", label: "Unit Database", icon: "🗡" },
           { key: "items", label: "Items & Relics", icon: "✨" },
+          { key: "map", label: "Campaign Map", icon: "🗺" },
           { key: "rules", label: "House Rules", icon: "📖" },
           { key: "data", label: "Manage Data", icon: "⚙" },
           { key: "settings", label: "Settings", icon: "🔧" },
@@ -709,6 +755,7 @@ function ArmyBuilder({ data, onRefreshData }) {
             setShowNewListDialog={setShowNewListDialog}
             notify={notify}
             magicItems={magicItems}
+            onOpenGameView={() => setShowGameView(true)}
           />
         )}
         {view === "units" && (
@@ -729,6 +776,7 @@ function ArmyBuilder({ data, onRefreshData }) {
           <ItemsView allUnits={allUnits} faction={faction} magicItems={magicItems} />
         )}
         {view === "rules" && <RulesView houseRules={allHouseRules} customRules={customRules} saveCustomRules={saveCustomRules} faction={faction} notify={notify} />}
+        {view === "map" && <MapView factions={FALLBACK_FACTIONS} />}
         {view === "data" && (
           <DataView
             faction={faction}
@@ -778,7 +826,7 @@ function RosterView({
   faction, activeFaction, armyLists, currentList, currentListId,
   setCurrentListId, createList, deleteList, allUnits, addUnitToList,
   updateEntry, removeEntry, totalPoints, showNewListDialog, setShowNewListDialog, notify,
-  magicItems,
+  magicItems, onOpenGameView,
 }) {
   const [newListName, setNewListName] = useState("");
   const [newListPts, setNewListPts] = useState("2000");
@@ -887,12 +935,20 @@ function RosterView({
             <h2 style={{ ...styles.sectionTitle, color: faction.accent }}>
               {currentList.name}
             </h2>
-            <button
-              style={{ ...styles.btn, background: faction.color }}
-              onClick={() => setShowAddUnit(!showAddUnit)}
-            >
-              {showAddUnit ? "Close" : "+ Add Unit"}
-            </button>
+            <div style={{ display: "flex", gap: 8 }}>
+              <button
+                style={{ ...styles.btn, background: "#1e3a5f" }}
+                onClick={onOpenGameView}
+              >
+                🎮 Game View
+              </button>
+              <button
+                style={{ ...styles.btn, background: faction.color }}
+                onClick={() => setShowAddUnit(!showAddUnit)}
+              >
+                {showAddUnit ? "Close" : "+ Add Unit"}
+              </button>
+            </div>
           </div>
 
           {/* Points Bar */}
@@ -1036,6 +1092,10 @@ function MagicItemsPanel({ entry, unitDef, faction, updateEntry, itemsCatalog })
   const spent = calcMagicItemsCost(equipped);
   const remaining = budget - spent;
 
+  // Relic slot blocking for named characters
+  const relicSlot = unitDef.relic ? getRelicSlot(unitDef.relic) : null;
+  const hasRelic = !!entry.relicForm && !!unitDef.relic && unitDef.relic.name !== "TBD";
+
   const equipItem = (slot, item) => {
     const updated = { ...equipped, [slot]: item };
     updateEntry(entry.entryId, { magicItems: updated });
@@ -1065,6 +1125,20 @@ function MagicItemsPanel({ entry, unitDef, faction, updateEntry, itemsCatalog })
       </div>
 
       {visibleSlots.map((slot) => {
+        // Relic occupies this slot — show locked row
+        if (hasRelic && relicSlot === slot) {
+          const relicFormLabel = entry.relicForm === "upgraded" ? "★ Upgraded" : "Basic";
+          return (
+            <div key={slot} style={{ marginBottom: 4 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "4px 6px", background: "#2a1a0a", borderRadius: 4, border: "1px solid #b4530966" }}>
+                <span style={{ color: "#9ca3af", fontSize: 11, minWidth: 90 }}>{MAGIC_SLOT_LABELS[slot]}</span>
+                <span style={{ color: "#fbbf24", fontSize: 12, flex: 1, fontStyle: "italic" }}>✦ {unitDef.relic.name}</span>
+                <span style={{ fontSize: 10, padding: "1px 5px", borderRadius: 3, background: "#422006", color: "#f59e0b", border: "1px solid #92400e" }}>{relicFormLabel} · Relic</span>
+              </div>
+            </div>
+          );
+        }
+
         const equippedItem = equipped[slot];
         const isOpen = openSlot === slot;
         const items = (itemsCatalog && itemsCatalog[slot]) || [];
