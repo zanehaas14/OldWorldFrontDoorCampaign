@@ -197,8 +197,21 @@ function UnitGameCard({ entry, unitDef, faction, localRulesDesc }) {
 
   const displayUpgradeExtras = upgradeExtras;
 
-  // Special rules
-  const specialRules = unitDef.specialRules || [];
+  // Active mount upgrade (if any has a mountProfile)
+  const activeMountUpg = (unitDef.upgrades || []).find(
+    (u) => u.type === "mount" && (entry.activeUpgrades || []).includes(u.id) && u.mountProfile
+  ) || null;
+  const mountProfile = activeMountUpg?.mountProfile || null;
+  const mountEquipChips = activeMountUpg?.mountEquipment || [];
+  const allGVProfiles = mountProfile
+    ? [...(unitDef.profiles || []), mountProfile]
+    : (unitDef.profiles || []);
+
+  // Special rules — base + mount rules combined
+  const specialRules = [
+    ...(unitDef.specialRules || []),
+    ...(activeMountUpg?.mountRules || []),
+  ];
 
   return (
     <div style={gvStyles.unitCard}>
@@ -210,7 +223,7 @@ function UnitGameCard({ entry, unitDef, faction, localRulesDesc }) {
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <span style={{ color: "#6b7280", fontSize: 13, transform: expanded ? "rotate(90deg)" : "rotate(0)", display: "inline-block", transition: "transform 0.15s" }}>▸</span>
           <div>
-            <strong style={{ color: "#e5e7eb", fontSize: 15 }}>{entry.unitName}</strong>
+            <strong style={{ color: "#e5e7eb", fontSize: 15 }}>{unitDef?.name || entry.unitName}</strong>
             {!entry.isCharacter && (
               <span style={{ color: "#9ca3af", fontSize: 13, marginLeft: 6 }}>
                 × {entry.modelCount}
@@ -257,8 +270,8 @@ function UnitGameCard({ entry, unitDef, faction, localRulesDesc }) {
             </div>
           )}
 
-          {/* Stat table */}
-          {unitDef.profiles?.length > 0 && (
+          {/* Stat table — includes mount profile row when mounted */}
+          {allGVProfiles.length > 0 && (
             <div style={gvStyles.statTableWrap}>
               <table style={gvStyles.statTable}>
                 <thead>
@@ -269,18 +282,36 @@ function UnitGameCard({ entry, unitDef, faction, localRulesDesc }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {unitDef.profiles.map((p, i) => (
-                    <tr key={i} style={{ background: i % 2 === 0 ? "transparent" : "#ffffff05" }}>
-                      <td style={{ ...gvStyles.statTd, color: faction.accent, textAlign: "left", fontWeight: 600, minWidth: 120 }}>
-                        {p.name}
-                      </td>
-                      {["M", "WS", "BS", "S", "T", "W", "I", "A", "Ld"].map((s) => (
-                        <td key={s} style={gvStyles.statTd}>{p[s] ?? "-"}</td>
-                      ))}
-                    </tr>
-                  ))}
+                  {allGVProfiles.map((p, i) => {
+                    const isMountRow = mountProfile && i === allGVProfiles.length - 1;
+                    return (
+                      <tr key={i} style={{ background: isMountRow ? "#0d2010" : i % 2 === 0 ? "transparent" : "#ffffff05" }}>
+                        <td style={{ ...gvStyles.statTd, color: isMountRow ? "#4ade80" : faction.accent, textAlign: "left", fontWeight: 600, minWidth: 120 }}>
+                          {isMountRow ? "🐉 " : ""}{p.name}
+                        </td>
+                        {["M", "WS", "BS", "S", "T", "W", "I", "A", "Ld"].map((s) => (
+                          <td key={s} style={gvStyles.statTd}>{p[s] ?? "-"}</td>
+                        ))}
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
+              {mountEquipChips.length > 0 && (
+                <div style={{ padding: "4px 6px", fontSize: 12, color: "#4ade80" }}>
+                  🐉 <strong>Weapons:</strong> {mountEquipChips.join(" · ")}
+                </div>
+              )}
+              {activeMountUpg?.mountArmour && (
+                <div style={{ padding: "2px 6px 4px", fontSize: 12, color: "#4ade80" }}>
+                  🐉 <strong>Armour:</strong> {activeMountUpg.mountArmour}
+                </div>
+              )}
+              {activeMountUpg?.mountBase && (
+                <div style={{ padding: "1px 6px 4px", fontSize: 11, color: "#6b7280" }}>
+                  🐉 Base: {activeMountUpg.mountBase}
+                </div>
+              )}
             </div>
           )}
 

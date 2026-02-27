@@ -215,7 +215,7 @@
     },
     {
       "id": "gareth",
-      "name": "Gareth (Glade Lord on Great Stag)",
+      "name": "Gareth",
       "category": "Named Characters",
       "ptsCost": 200,
       "isCharacter": true,
@@ -471,17 +471,66 @@
         },
         {
           "id": "dae_mount_spirit",
-          "name": "Spirit Mount (same as Parliament Guard)",
+          "name": "Spirit Mount \u2014 Mist-Hawk",
           "pts": 40,
           "type": "mount",
-          "exclusive": true
+          "exclusive": true,
+          "mountProfile": {
+            "name": "Mist-Hawk",
+            "M": 8,
+            "WS": 4,
+            "BS": "-",
+            "S": 4,
+            "T": "(+1)",
+            "W": "(+2)",
+            "I": 4,
+            "A": 3,
+            "Ld": "-"
+          },
+          "mountEquipment": [
+            "Wicked Claws (S4, AP-1, Armour Bane 1)"
+          ],
+          "mountRules": [
+            "Fly (8\")",
+            "Swiftstride",
+            "Shrouded in Mist: Natural 6s To Hit must be re-rolled"
+          ],
+          "troopType": "Monstrous Cavalry"
         },
         {
           "id": "dae_mount_dragon",
           "name": "Lothaqshynin (Forest Dragon)",
           "pts": 275,
           "type": "mount",
-          "exclusive": true
+          "exclusive": true,
+          "mountProfile": {
+            "name": "Lothaqshynin (Forest Dragon)",
+            "M": 6,
+            "WS": 6,
+            "BS": "-",
+            "S": 7,
+            "T": "(+3)",
+            "W": "(+6)",
+            "I": 4,
+            "A": 6,
+            "Ld": "-"
+          },
+          "mountEquipment": [
+            "Serrated Maw (Combat, S, -, Armour Bane 2, Multiple Wounds 2; must use one attack per turn)",
+            "Soporific Breath (N/A, S2, N/A \u2013 Breath Weapon; no Armour save vs. wounds)",
+            "Wicked Claws (Combat, S, AP-2)"
+          ],
+          "mountRules": [
+            "Close Order",
+            "Large Target",
+            "Fly (10\")",
+            "Swiftstride",
+            "Stomp Attacks (D6)",
+            "Terror"
+          ],
+          "troopType": "Behemoth (mount)",
+          "mountArmour": "Full Plate Armour (4+)",
+          "mountBase": "60x100mm"
         },
         {
           "id": "lore_dae_battle_magic",
@@ -903,7 +952,7 @@
     },
     {
       "id": "rephal",
-      "name": "Rephal (Khainite Assassin)",
+      "name": "Rephal Morgeil",
       "category": "Named Characters",
       "ptsCost": 80,
       "isCharacter": true,
@@ -972,40 +1021,43 @@
           "id": "rep_rxbow",
           "name": "Repeater Crossbow",
           "pts": 3,
-          "type": "equipment"
+          "type": "equipment",
+          "description": "Range 24\", S4, Multiple Shots (2), Quick to Fire."
         },
         {
           "id": "rep_light_armour",
           "name": "Light Armour",
           "pts": 5,
-          "type": "equipment"
+          "type": "equipment",
+          "description": "Armour Value 6+."
         },
         {
           "id": "rep_cloak",
           "name": "Cloak of Twilight",
           "pts": 15,
-          "type": "equipment"
+          "type": "equipment",
+          "description": "+2 to Armour Save in the first round of combat."
         },
         {
           "id": "rep_dark_venom",
           "name": "Dark Venom",
           "pts": 15,
           "type": "special",
-          "description": "Attacks cause -1 Toughness on unsaved wounds (min 1)."
+          "description": "The wielder's attacks cause a -1 modifier to the target's Toughness (min 1) on each unsaved wound."
         },
         {
           "id": "rep_manbane",
           "name": "Manbane",
           "pts": 10,
           "type": "special",
-          "description": "Multiple Wounds (2) against non-Large targets."
+          "description": "The wielder's attacks gain Multiple Wounds (2) against non-Large targets."
         },
         {
           "id": "rep_rending_stars",
           "name": "Rending Stars",
           "pts": 5,
           "type": "special",
-          "description": "Missile weapon. Range 12\", S3, AP-1. Up to 2 per Shooting phase."
+          "description": "Missile weapon. Range 12\", S3, AP-1. Up to 2 thrown per Shooting phase."
         },
         {
           "id": "rep_magic_items",
@@ -1018,7 +1070,7 @@
     },
     {
       "id": "caerwynne",
-      "name": "Caerwynne (Shadow Dancer)",
+      "name": "Caerwynne",
       "category": "Named Characters",
       "ptsCost": 105,
       "isCharacter": true,
@@ -3230,7 +3282,7 @@
     },
     {
       "id": "we_sisters_of_the_thorn",
-      "name": "Sisters Of The Thorn",
+      "name": "Templars of Morngal",
       "category": "Special",
       "ptsPerModel": 22,
       "minSize": 5,
