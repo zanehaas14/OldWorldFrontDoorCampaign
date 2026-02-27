@@ -1,6 +1,4 @@
 // netlify/functions/rule-lookup.js
-// Fetches special rule definitions from tow.whfb.app and returns parsed JSON.
-// Called by GameView.jsx as: /.netlify/functions/rule-lookup?rule={slug}
 
 exports.handler = async function (event) {
   const CORS = {
@@ -9,15 +7,18 @@ exports.handler = async function (event) {
     "Content-Type": "application/json",
   };
 
+  if (event.httpMethod === "OPTIONS") {
+    return { statusCode: 200, headers: CORS, body: "" };
+  }
+
   const rule = event.queryStringParameters?.rule;
   if (!rule) {
     return { statusCode: 400, headers: CORS, body: JSON.stringify({ error: "No rule slug provided" }) };
   }
 
-  // Try candidate URL patterns in order
   const candidates = [
-    `https://tow.whfb.app/rules/special-rules/${rule}`,
     `https://tow.whfb.app/special-rules/${rule}`,
+    `https://tow.whfb.app/rules/special-rules/${rule}`,
     `https://tow.whfb.app/rules/${rule}`,
   ];
 
@@ -27,16 +28,17 @@ exports.handler = async function (event) {
   for (const url of candidates) {
     try {
       const res = await fetch(url, {
-        headers: { "User-Agent": "Mozilla/5.0 (compatible; TOW-Army-Builder/1.0)" },
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+          "Accept": "text/html",
+        },
       });
       if (res.ok) {
         html = await res.text();
         sourceUrl = url;
         break;
       }
-    } catch (_) {
-      // try next
-    }
+    } catch (_) {}
   }
 
   if (!html) {
@@ -47,79 +49,94 @@ exports.handler = async function (event) {
     };
   }
 
-  // ── Parse the HTML ──
-  // tow.whfb.app uses a consistent structure:
-  //   <h1> = rule name
-  //   .breadcrumb or nav = breadcrumb text
-  //   <em> inside main content = flavor text
-  //   <p> tags = body text
-
-  const parsed = parseRulePage(html, sourceUrl);
-
-  return {
-    statusCode: 200,
-    headers: CORS,
-    body: JSON.stringify(parsed),
-  };
+  const parsed = parseRulePage(html, sourceUrl, rule);
+  return { statusCode: 200, headers: CORS, body: JSON.stringify(parsed) };
 };
 
-function parseRulePage(html, sourceUrl) {
+function parseRulePage(html, sourceUrl, slug) {
   const result = { sourceUrl };
 
-  // Extract rule name from <h1>
+  // Pretty rule name from slug as fallback
+  const prettyName = slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+  result.name = prettyName;
+
+  // Try to get real rule name from h1 — but reject if it's the site title
   const h1Match = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
   if (h1Match) {
-    result.name = stripTags(h1Match[1]).trim();
-  }
-
-  // Extract breadcrumb (e.g. "Special Rules :: Table of Contents")
-  const breadcrumbMatch = html.match(/<(?:nav|div)[^>]*class="[^"]*breadcrumb[^"]*"[^>]*>([\s\S]*?)<\/(?:nav|div)>/i)
-    || html.match(/Special Rules.*?Table of Contents/i);
-  if (breadcrumbMatch) {
-    result.breadcrumb = stripTags(breadcrumbMatch[0]).trim().replace(/\s+/g, " ");
-  }
-
-  // Extract meta info (Last update, page reference)
-  // Look for patterns like "Last update: 2025 June 25" and "Rulebook, p. 178"
-  const metaPatterns = [
-    /Last update[^<\n]*/i,
-    /Rulebook[^<\n]*/i,
-    /Errata[^<\n]*/i,
-  ];
-  const metas = [];
-  for (const pat of metaPatterns) {
-    const m = html.match(pat);
-    if (m) metas.push(m[0].trim());
-  }
-  if (metas.length) result.meta = metas.join("\n");
-
-  // Extract main content area — look for <main> or <article> or the primary content div
-  let contentHtml = html;
-  const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i)
-    || html.match(/<article[^>]*>([\s\S]*?)<\/article>/i)
-    || html.match(/<div[^>]*class="[^"]*content[^"]*"[^>]*>([\s\S]*?)<\/div>/i);
-  if (mainMatch) contentHtml = mainMatch[1];
-
-  // Extract italic flavor text (typically <em> or <i> in a <p>)
-  const flavorMatch = contentHtml.match(/<(?:em|i)[^>]*>([\s\S]*?)<\/(?:em|i)>/i);
-  if (flavorMatch) {
-    const flavor = stripTags(flavorMatch[1]).trim();
-    if (flavor.length > 20) result.flavorText = flavor;
-  }
-
-  // Extract body paragraphs — all <p> tags after the h1
-  const afterH1 = contentHtml.replace(/<h1[\s\S]*?<\/h1>/i, "");
-  const paragraphs = [];
-  const pRegex = /<p[^>]*>([\s\S]*?)<\/p>/gi;
-  let match;
-  while ((match = pRegex.exec(afterH1)) !== null) {
-    const text = stripTags(match[1]).trim();
-    // Skip very short texts, navigation items, and the flavor text we already captured
-    if (text.length > 30 && text !== result.flavorText) {
-      paragraphs.push(text);
+    const h1Text = stripTags(h1Match[1]).trim();
+    if (h1Text.length > 2 && !h1Text.toLowerCase().includes("online rules index") && !h1Text.toLowerCase().includes("warhammer: the old world")) {
+      result.name = h1Text;
     }
   }
-  if (paragraphs.length) result.body = paragraphs.join("\n\n");
+
+  // Strip all tags to get a plain text version to work with
+  const plainText = html
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/p>/gi, "\n")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&quot;/g, '"')
+    .replace(/&#\d+;/g, "")
+    .replace(/[ \t]{2,}/g, " ")
+    .split("\n")
+    .map(l => l.trim())
+    .filter(l => l.length > 0)
+    .join("\n");
+
+  // The key pattern: tow.whfb.app always has "Rulebook, p. XXX · [rule text]"
+  // OR the text appears right after the page reference line
+  // Find "Rulebook, p. NNN" and grab everything after the · separator
+  const rulebookMatch = plainText.match(/Rulebook,?\s*p\.\s*\d+\s*[·•]\s*([\s\S]+?)(?=\n(?:Back|Source:|Table of Contents|Last update|New FAQ|Special Rules Table|Cumulative)|$)/i);
+
+  if (rulebookMatch) {
+    const pageRefMatch = plainText.match(/Rulebook,?\s*p\.\s*\d+/i);
+    if (pageRefMatch) result.pageRef = pageRefMatch[0];
+
+    const bodyLines = rulebookMatch[1]
+      .split("\n")
+      .map(l => l.trim())
+      .filter(l =>
+        l.length > 10 &&
+        !l.match(/^back$/i) &&
+        !l.match(/^source:/i) &&
+        !l.match(/^last update/i) &&
+        !l.match(/^table of contents/i) &&
+        !l.match(/online rules index/i) &&
+        !l.match(/^new faq/i)
+      );
+
+    if (bodyLines.length) {
+      result.body = bodyLines.join(" ").replace(/\s{2,}/g, " ").trim();
+      return result;
+    }
+  }
+
+  // Fallback: find the rule name in plain text, then grab the paragraph after it
+  const nameIdx = plainText.indexOf(result.name);
+  if (nameIdx !== -1) {
+    const afterName = plainText.slice(nameIdx + result.name.length);
+    // Skip page ref line, grab the meaty paragraph
+    const paragraphs = afterName
+      .split("\n")
+      .map(l => l.trim())
+      .filter(l =>
+        l.length > 40 &&
+        !l.match(/^back$/i) &&
+        !l.match(/^source:/i) &&
+        !l.match(/online rules index/i) &&
+        !l.match(/table of contents/i) &&
+        !l.match(/^last update/i)
+      );
+
+    if (paragraphs.length) {
+      result.body = paragraphs[0];
+    }
+  }
 
   return result;
 }
@@ -131,7 +148,6 @@ function stripTags(str) {
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&nbsp;/g, " ")
-    .replace(/&#\d+;/g, "")
     .replace(/\s{2,}/g, " ")
     .trim();
 }

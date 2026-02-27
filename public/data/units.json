@@ -46,7 +46,7 @@
         "Fly (8\"), Swiftstride, Close Order, Fear",
         "Shrouded in Mist: Natural 6s To Hit must be re-rolled",
         "Furious Charge: +1A on charge",
-        "Stances – Heavenly Headsmen: Killing Blow OR Harvesters of Fear: Ld test at -1, +1A on fail"
+        "Stances \u2013 Heavenly Headsmen: Killing Blow OR Harvesters of Fear: Ld test at -1, +1A on fail"
       ],
       "notes": "Anti-Cavalry Assassin. High WS/I strike before Knights.",
       "upgrades": [
@@ -232,11 +232,25 @@
           "I": 8,
           "A": 4,
           "Ld": 10
+        },
+        {
+          "name": "Huarath",
+          "M": 8,
+          "WS": 4,
+          "BS": "-",
+          "S": 6,
+          "T": "(+1)",
+          "W": "(+2)",
+          "I": 4,
+          "A": 3,
+          "Ld": "-"
         }
       ],
       "equipment": [
         "Hand Weapon",
-        "Heavy Armour (5+ Save — via Black Plates of Ilmennath)"
+        "Heavy Armour (5+ Save \u2014 via Black Plates of Ilmennath)",
+        "Asrai Longbow (R32\", S:User, AP1, Armour Bane 1, Volley Fire)",
+        "Huarath \u2014 Claw and Fang (S user, AP-2, Armour Bane 2), Armoured Hide (2+)"
       ],
       "specialRules": [
         "General",
@@ -245,16 +259,139 @@
         "Strike First",
         "Evasive",
         "Rallying Cry",
-        "Ignores Cover"
+        "Ignores Cover",
+        "Predator's Fury: Hatred (all enemies) on a turn Huarath charged",
+        "Fight for Dominance: Before deployment, mark one enemy unit. +1 To Hit and +1 To Wound vs that unit",
+        "Huarath: Terror, First Charge, Stomp (1), Swiftstride, Move Through Cover"
       ],
       "relic": {
         "name": "Black Plates of Ilmennath (Celestial Ruin)",
         "type": "Armour",
-        "basicForm": "Heavy Armour (5+ save). Regeneration (Scaling): starts 6+; improves to 5+ after 2 unsaved wounds caused; improves to 4+ after 4 unsaved wounds caused (cumulative across battle, permanent). Empowered State (unlocked at 4+): Daemonic Vessel — Bound Spell PL2, cast on 2D6+2. Range Self. Until end of turn: wearer, mount, and joined unit gain +1S, +1A (max 10), and +1AP on all weapons.",
+        "basicForm": "Heavy Armour (5+ save). Regeneration (Scaling): starts 6+; improves to 5+ after 2 unsaved wounds caused; improves to 4+ after 4 unsaved wounds caused (cumulative across battle, permanent). Empowered State (unlocked at 4+): Daemonic Vessel \u2014 Bound Spell PL2, cast on 2D6+2. Range Self. Until end of turn: wearer, mount, and joined unit gain +1S, +1A (max 10), and +1AP on all weapons.",
         "upgradedForm": "All Basic Form rules. Daemonic Vessel upgrades to PL3, cast on 2D6+3 (same effect). Broken Morale Aura (always active): one chosen enemy unit within 12\" of Gareth cannot use their General's Inspiring Presence."
       },
-      "notes": "Must join Knights of the Savage Drake.",
-      "isNamed": true
+      "notes": "Must join Knights of the Savage Drake. Mount: Huarath (65pts, Monstrous Cavalry, 50x100 base).",
+      "isNamed": true,
+      "upgrades": [
+        {
+          "id": "gar_weap_ahw",
+          "name": "Additional Hand Weapon",
+          "pts": 3,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "gar_weap_great",
+          "name": "Great Weapon",
+          "pts": 4,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "gar_weap_cavspear",
+          "name": "Cavalry Spear",
+          "pts": 2,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "gar_shield",
+          "name": "Shield",
+          "pts": 3,
+          "type": "equipment"
+        },
+        {
+          "id": "gar_magic_items",
+          "name": "Magic Items",
+          "pts": 0,
+          "type": "magic",
+          "maxPoints": 100
+        },
+        {
+          "id": "gar_arrows_hagbane",
+          "name": "Hagbane Tips",
+          "pts": 10,
+          "type": "enchanted_arrows",
+          "exclusive": true
+        },
+        {
+          "id": "gar_arrows_starfire",
+          "name": "Starfire Shafts",
+          "pts": 5,
+          "type": "enchanted_arrows",
+          "exclusive": true
+        },
+        {
+          "id": "gar_arrows_trueflight",
+          "name": "Trueflight Arrows",
+          "pts": 10,
+          "type": "enchanted_arrows",
+          "exclusive": true
+        },
+        {
+          "id": "gar_arrows_swiftshiver",
+          "name": "Swiftshiver Shards",
+          "pts": 10,
+          "type": "enchanted_arrows",
+          "exclusive": true
+        },
+        {
+          "id": "gar_arrows_moonfire",
+          "name": "Moonfire Shot",
+          "pts": 20,
+          "type": "enchanted_arrows",
+          "exclusive": true
+        },
+        {
+          "id": "gar_arrows_arcane",
+          "name": "Arcane Bodkins",
+          "pts": 15,
+          "type": "enchanted_arrows",
+          "exclusive": true
+        },
+        {
+          "id": "gar_sprite_luminescents",
+          "name": "A Resplendence of Luminescents",
+          "pts": 10,
+          "type": "sprites"
+        },
+        {
+          "id": "gar_sprite_netlings",
+          "name": "An Annoyance of Netlings",
+          "pts": 15,
+          "type": "sprites"
+        },
+        {
+          "id": "gar_sprite_despairs",
+          "name": "A Lamentation of Despairs",
+          "pts": 20,
+          "type": "sprites"
+        },
+        {
+          "id": "gar_sprite_spites",
+          "name": "A Murder of Spites",
+          "pts": 25,
+          "type": "sprites"
+        },
+        {
+          "id": "gar_sprite_mischiefs",
+          "name": "A Befuddlement of Mischiefs",
+          "pts": 30,
+          "type": "sprites"
+        },
+        {
+          "id": "gar_sprite_malevolents",
+          "name": "A Muster of Malevolents",
+          "pts": 40,
+          "type": "sprites"
+        },
+        {
+          "id": "gar_sprite_terrors",
+          "name": "A Blight of Terrors",
+          "pts": 50,
+          "type": "sprites"
+        }
+      ]
     },
     {
       "id": "daedilae",
@@ -296,10 +433,10 @@
         "Shrouded in Mist"
       ],
       "relic": {
-        "name": "Fëalana (Willbreaker)",
+        "name": "F\u00ebalana (Willbreaker)",
         "type": "Weapon",
         "basicForm": "Har Ganeth Greatsword: S+2, AP-1, Cleaving Blow, Requires Two Hands. Punishing Riposte: whenever an enemy in base contact rolls a natural 1 to hit against Daedilae in close combat, she immediately makes 1 Attack back against that model's unit using her normal profile and Willbreaker's rules. Maximum one Riposte per Combat phase. Aura of Broken Will: enemy Wizards within 9\" suffer -1 to Casting rolls (applied after all other modifiers).",
-        "upgradedForm": "All Basic Form rules. Punishing Riposte (Enhanced): no longer limited to once per Combat phase — Daedilae makes a Riposte Attack for each natural 1 rolled against her. Aura of Broken Will (Enhanced): range increased to 18\"."
+        "upgradedForm": "All Basic Form rules. Punishing Riposte (Enhanced): no longer limited to once per Combat phase \u2014 Daedilae makes a Riposte Attack for each natural 1 rolled against her. Aura of Broken Will (Enhanced): range increased to 18\"."
       },
       "notes": "Uses High Priestess of Kul Anar profile. May join Daedilae's Guard (Parliament Guard), Wardancers freely.",
       "troopType": "Regular Infantry (character)",
@@ -372,14 +509,14 @@
     },
     {
       "id": "dugalathir",
-      "name": "Dûgalathir (Watcher of the Void)",
+      "name": "D\u00fbgalathir (Watcher of the Void)",
       "category": "Named Characters",
       "ptsCost": 265,
       "isCharacter": true,
       "isCustom": true,
       "profiles": [
         {
-          "name": "Dûgalathir",
+          "name": "D\u00fbgalathir",
           "M": 6,
           "WS": 6,
           "BS": 3,
@@ -394,7 +531,7 @@
       "equipment": [
         "Oaken Fists",
         "Strangleroots",
-        "Indolair — Double Voulge (Two-handed, S+1, Armour Bane 1)"
+        "Indolair \u2014 Double Voulge (Two-handed, S+1, Armour Bane 1)"
       ],
       "specialRules": [
         "Tree Spirit (Regen 5+, Flammable, Immune to Psychology, Move Through Cover)",
@@ -409,7 +546,7 @@
       "relic": {
         "name": "Indolair (Hungering Heart)",
         "type": "Weapon",
-        "basicForm": "Double Voulge (Two-handed, S+1, Armour Bane 1). Twin-Bladed Hunger: bearer gains +1 Attack. Call of the Dark Woods: bearer may cast Tree Singing as Bound Spell PL2. Place a 3\" template within 15\" — treated as woodland, enemy units treat it as Dangerous Terrain. Watcher's Vigilance: whilst within 3\" of a woodland feature, Dispel range increases by 3\".",
+        "basicForm": "Double Voulge (Two-handed, S+1, Armour Bane 1). Twin-Bladed Hunger: bearer gains +1 Attack. Call of the Dark Woods: bearer may cast Tree Singing as Bound Spell PL2. Place a 3\" template within 15\" \u2014 treated as woodland, enemy units treat it as Dangerous Terrain. Watcher's Vigilance: whilst within 3\" of a woodland feature, Dispel range increases by 3\".",
         "upgradedForm": "All Basic Form rules. Ravenous Assault: bearer gains +2 Attacks (replaces +1). Song of the Shadowed Grove: Tree Singing upgrades to Bound Spell PL3, large (5\") template. Sentinel of the Void: within 3\" of woodland, Dispel range +3\" AND roll an extra D6 on Dispel rolls, discarding the lowest."
       },
       "isNamed": true,
@@ -517,8 +654,8 @@
       "equipment": [
         "Oaken Fists",
         "Strangleroots",
-        "Elenraith — Celestial Scourge (counts as weapon)",
-        "Elenraith — Dark Shield (counts as shield)"
+        "Elenraith \u2014 Celestial Scourge (counts as weapon)",
+        "Elenraith \u2014 Dark Shield (counts as shield)"
       ],
       "specialRules": [
         "Tree Spirit (Regen 5+, Flammable, Immune to Psychology, Move Through Cover)",
@@ -533,8 +670,8 @@
       "relic": {
         "name": "Elenraith (Star-Shower)",
         "type": "Enchanted Item",
-        "basicForm": "Shield Passive: bearer reduces all Multiple Wounds suffered by 1 (minimum 1). Single Use — Celestial Fire: once per battle, place a 3\" template within 24\". All models under it suffer S4 AP-1 hit with Magical Attacks and Flaming Attacks. The struck area becomes Difficult Terrain until the start of the player's next turn.",
-        "upgradedForm": "Shield Passive (Enhanced): bearer reduces all Multiple Wounds by 1 (minimum 1). Additionally, if bearer would be slain by a Monster Slayer wound, instead reduce remaining Wounds to half starting value (round up) and bearer may still attempt Regeneration saves. Two Uses — Celestial Fire: twice per battle (same effect as Basic Form)."
+        "basicForm": "Shield Passive: bearer reduces all Multiple Wounds suffered by 1 (minimum 1). Single Use \u2014 Celestial Fire: once per battle, place a 3\" template within 24\". All models under it suffer S4 AP-1 hit with Magical Attacks and Flaming Attacks. The struck area becomes Difficult Terrain until the start of the player's next turn.",
+        "upgradedForm": "Shield Passive (Enhanced): bearer reduces all Multiple Wounds by 1 (minimum 1). Additionally, if bearer would be slain by a Monster Slayer wound, instead reduce remaining Wounds to half starting value (round up) and bearer may still attempt Regeneration saves. Two Uses \u2014 Celestial Fire: twice per battle (same effect as Basic Form)."
       },
       "isNamed": true,
       "troopType": "Monstrous Creature (character)",
@@ -726,8 +863,8 @@
       "relic": {
         "name": "Laurels of Thalgil (Shifting Stars)",
         "type": "Enchanted Item",
-        "basicForm": "Constant — Pathwalker's Grace: Caerwynne and any joined unit gain Swiftstride. Single Use — The Shifting Path (Command phase only): Caerwynne and her joined unit teleport to any location on the battlefield (not within 8\" of enemy models). Caerwynne must pass a Leadership test; if failed, the unit scatters D6\" in a random direction. If scatter would place unit within 1\" of enemy or impassable terrain, the teleport fails and the use is expended. After teleporting, the unit cannot move again this Movement phase but may act normally otherwise.",
-        "upgradedForm": "Constant — Pathwalker's Blessing: Caerwynne and joined unit gain Swiftstride and First Charge (always active). Single Use — The Trickster's Path: same teleport rules as Basic Form. The Dual-Masked Dance: after successfully teleporting, in their next combat phase the unit may choose TWO of the four Dances of Loec simultaneously: Whirling Death (AP+2), Storm of Blades (+1 Attack), The Shadows Coil (4+ ward vs wounds), Woven Mist (enemies -1 to hit). Both dances active for that combat phase only. If the unit doesn't enter combat before the next Movement phase, this benefit is lost."
+        "basicForm": "Constant \u2014 Pathwalker's Grace: Caerwynne and any joined unit gain Swiftstride. Single Use \u2014 The Shifting Path (Command phase only): Caerwynne and her joined unit teleport to any location on the battlefield (not within 8\" of enemy models). Caerwynne must pass a Leadership test; if failed, the unit scatters D6\" in a random direction. If scatter would place unit within 1\" of enemy or impassable terrain, the teleport fails and the use is expended. After teleporting, the unit cannot move again this Movement phase but may act normally otherwise.",
+        "upgradedForm": "Constant \u2014 Pathwalker's Blessing: Caerwynne and joined unit gain Swiftstride and First Charge (always active). Single Use \u2014 The Trickster's Path: same teleport rules as Basic Form. The Dual-Masked Dance: after successfully teleporting, in their next combat phase the unit may choose TWO of the four Dances of Loec simultaneously: Whirling Death (AP+2), Storm of Blades (+1 Attack), The Shadows Coil (4+ ward vs wounds), Woven Mist (enemies -1 to hit). Both dances active for that combat phase only. If the unit doesn't enter combat before the next Movement phase, this benefit is lost."
       },
       "isNamed": true,
       "troopType": "Regular Infantry (character)",
@@ -1565,9 +1702,16 @@
           "pts": 0,
           "type": "lore",
           "exclusive": true
+        },
+        {
+          "id": "lore_ta_athel_cythrel",
+          "name": "Lore of Athel Cythrel",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
         }
       ],
-      "notes": "Lores: Battle Magic, Elementalism, Lore of the Wilds. Magic Items (100pts)."
+      "notes": "Lores: Battle Magic, Elementalism, Lore of the Wilds, Lore of Athel Cythrel. Magic Items (100pts)."
     },
     {
       "id": "we_wardens_of_talsyn",
@@ -1715,7 +1859,62 @@
         "Scouts",
         "Skirmishers"
       ],
-      "notes": "Dark Elf datasheet for Rephal. Magic Items (50pts). Options: Repeater Xbows +3, AHW +3, Light Armour +5, Cloak of Twilight +15, Dark Venom +15."
+      "notes": "Dark Elf datasheet for Rephal. Magic Items (50pts). Options: Repeater Xbows +3, AHW +3, Light Armour +5, Cloak of Twilight +15, Dark Venom +15.",
+      "upgrades": [
+        {
+          "id": "ka_weap_ahw",
+          "name": "Additional Hand Weapon",
+          "pts": 3,
+          "type": "equipment",
+          "exclusive": true
+        },
+        {
+          "id": "ka_weap_rxbow",
+          "name": "Repeater Crossbow",
+          "pts": 3,
+          "type": "equipment"
+        },
+        {
+          "id": "ka_armour_light",
+          "name": "Light Armour",
+          "pts": 5,
+          "type": "equipment"
+        },
+        {
+          "id": "ka_cloak_twilight",
+          "name": "Cloak of Twilight",
+          "pts": 15,
+          "type": "equipment"
+        },
+        {
+          "id": "ka_dark_venom",
+          "name": "Dark Venom",
+          "pts": 15,
+          "type": "special",
+          "description": "Attacks with this poison cause a -1 modifier to the target's Toughness characteristic (minimum 1) on unsaved wounds."
+        },
+        {
+          "id": "ka_manbane",
+          "name": "Manbane",
+          "pts": 10,
+          "type": "special",
+          "description": "The wielder's attacks gain the Multiple Wounds (2) special rule against non-Large targets."
+        },
+        {
+          "id": "ka_rending_stars",
+          "name": "Rending Stars",
+          "pts": 5,
+          "type": "special",
+          "description": "Missile weapon. Range 12\", S3, AP-1. The model may throw up to 2 Rending Stars per Shooting phase."
+        },
+        {
+          "id": "ka_magic_items",
+          "name": "Magic Items",
+          "pts": 0,
+          "type": "magic",
+          "maxPoints": 50
+        }
+      ]
     },
     {
       "id": "high_priestess_kul_anar",
@@ -1750,7 +1949,7 @@
         "Immune to Psychology",
         "Move Through Cover",
         "Evasive",
-        "Loner (Kult of Kul Anar — may join Daedilae's Guard, Cult Acolytes, Wardancers only)",
+        "Loner (Kult of Kul Anar \u2014 may join Daedilae's Guard, Cult Acolytes, Wardancers only)",
         "Flawless Partner (shares Dance/Stance/Choreography of joined unit)"
       ],
       "upgrades": [
@@ -1803,7 +2002,7 @@
           "exclusive": true
         }
       ],
-      "notes": "Eonir Narrative Campaign — Kult of Kul Anar. May join Daedilae's Guard, Cult Acolytes, and Wardancers freely."
+      "notes": "Eonir Narrative Campaign \u2014 Kult of Kul Anar. May join Daedilae's Guard, Cult Acolytes, and Wardancers freely."
     },
     {
       "id": "we_glade_guard",
@@ -1942,7 +2141,7 @@
       "id": "we_dryads",
       "name": "Dryads",
       "category": "Core",
-      "ptsPerModel": 13,
+      "ptsPerModel": 12,
       "minSize": 5,
       "maxSize": 99,
       "troopType": "Regular Infantry",
@@ -2109,12 +2308,14 @@
       ],
       "equipment": [
         "Hand Weapon",
-        "Asrai Longbow (R32\", AP 1, AB1, Volley Fire)"
+        "Asrai Longbow (R32\", AP 1, AB1, Volley Fire)",
+        "Additional Hand Weapon"
       ],
       "specialRules": [
         "Elven Reflexes",
         "Scouts",
-        "Skirmishers"
+        "Skirmishers",
+        "Poison Attacks (Melee)"
       ],
       "upgrades": [
         {
@@ -2267,6 +2468,28 @@
           "name": "Musician",
           "pts": 6,
           "type": "command"
+        },
+        {
+          "id": "ward_great_weapon",
+          "name": "Great Weapon",
+          "pts": 2,
+          "type": "equipment",
+          "perModel": true
+        },
+        {
+          "id": "ward_spear_loec",
+          "name": "Spear of Loec",
+          "pts": 2,
+          "type": "equipment",
+          "perModel": true
+        },
+        {
+          "id": "ward_multi_weapons",
+          "name": "Additional Weapon Type",
+          "pts": 1,
+          "type": "equipment",
+          "perModel": true,
+          "note": "Units may purchase multiple weapon types"
         }
       ],
       "notes": "Shadow Dances of Loec (choose each round). Forest Sprites."
@@ -2444,9 +2667,9 @@
       "specialRules": [
         "Elven Reflexes",
         "Daughters of Eternity (4+ Ward)",
-        "Deepwood Covern (1 random spell)",
         "Fast Cavalry",
-        "Poisoned Attacks"
+        "Poisoned Attacks",
+        "Coven of Thorn (Wizard Lvl 1, choose from High Magic or Dark Magic)"
       ],
       "upgrades": [
         {
@@ -2472,9 +2695,23 @@
           "name": "Musician",
           "pts": 6,
           "type": "command"
+        },
+        {
+          "id": "sott_lore_high",
+          "name": "High Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "sott_lore_dark",
+          "name": "Dark Magic",
+          "pts": 0,
+          "type": "lore",
+          "exclusive": true
         }
       ],
-      "notes": ""
+      "notes": "Old Rules restored. Lores: High Magic, Dark Magic."
     },
     {
       "id": "we_warhawk_riders",
@@ -2631,7 +2868,9 @@
         "Ignores Cover",
         "Move Through Cover",
         "Scouts",
-        "Skirmishers"
+        "Skirmishers",
+        "+1 To Wound when Shooting",
+        "Does Not Move in the Movement Phase"
       ],
       "upgrades": [
         {
@@ -4608,8 +4847,8 @@
       ]
     },
     {
-      "id": "lady_élisse_duachaard",
-      "name": "Lady Élisse Duchaard",
+      "id": "lady_\u00e9lisse_duachaard",
+      "name": "Lady \u00c9lisse Duchaard",
       "category": "Characters",
       "ptsCost": 225,
       "isCharacter": true,
