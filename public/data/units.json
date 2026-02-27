@@ -390,6 +390,55 @@
           "name": "A Blight of Terrors",
           "pts": 50,
           "type": "sprites"
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
         }
       ]
     },
@@ -412,6 +461,30 @@
           "I": 7,
           "A": 4,
           "Ld": 9
+        },
+        {
+          "name": "\ud83d\udc09 Lothaqshynin (on Forest Dragon)",
+          "M": 6,
+          "WS": 6,
+          "BS": "-",
+          "S": 7,
+          "T": "(+3)",
+          "W": "(+6)",
+          "I": 4,
+          "A": 6,
+          "Ld": "-"
+        },
+        {
+          "name": "\ud83e\udd85 Mist-Hawk (on Spirit Mount)",
+          "M": 8,
+          "WS": 4,
+          "BS": "-",
+          "S": 4,
+          "T": "(+1)",
+          "W": "(+2)",
+          "I": 4,
+          "A": 3,
+          "Ld": "-"
         }
       ],
       "equipment": [
@@ -430,7 +503,9 @@
         "Loner (may join Daedilae's Guard, Parliament Guard, Wardancers freely)",
         "Flawless Partner (shares Dance/Stance/Choreography of joined unit)",
         "Grim Choreography",
-        "Shrouded in Mist"
+        "Shrouded in Mist",
+        "\u2501 Lothaqshynin: Serrated Maw (AB2, MW2), Soporific Breath (S2, no armour save), Wicked Claws (AP-2), Full Plate (4+) | Close Order, Large Target, Fly 10\", Swiftstride, Stomp D6, Terror",
+        "\u2501 Mist-Hawk: Wicked Claws (S4, AP-1, AB1) | Fly 8\", Swiftstride, Shrouded in Mist"
       ],
       "relic": {
         "name": "F\u00ebalana (Willbreaker)",

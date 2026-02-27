@@ -633,6 +633,27 @@ function ArmyBuilder({ data, onRefreshData }) {
     });
   };
 
+  // ── Auto-migrate stale entry.unitName to match live unitDef.name ──────────
+  useEffect(() => {
+    if (!allUnits || allUnits.length === 0 || Object.keys(armyLists).length === 0) return;
+    let changed = false;
+    const migrated = {};
+    Object.entries(armyLists).forEach(([listId, list]) => {
+      const newEntries = list.entries.map((e) => {
+        const unitDef = allUnits.find((u) => u.id === e.unitId);
+        if (unitDef && unitDef.name && e.unitName !== unitDef.name) {
+          changed = true;
+          return { ...e, unitName: unitDef.name };
+        }
+        return e;
+      });
+      migrated[listId] = { ...list, entries: newEntries };
+    });
+    if (changed) {
+      saveArmyLists(migrated);
+    }
+  }, [allUnits]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const totalPoints = currentList
     ? currentList.entries.reduce((sum, e) => sum + (e.ptsCost || 0), 0)
     : 0;
