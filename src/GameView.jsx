@@ -169,6 +169,10 @@ function UnitGameCard({ entry, unitDef, faction, localRulesDesc }) {
   const upgradeEquipment = activeUpgradeDefs
     .filter((u) => u.type === "equipment" || u.type === "command")
     .map((u) => u.name);
+  // Non-equipment upgrades shown as chips (special abilities, kindred, sprites, lore, mount, etc.)
+  const upgradeExtras = activeUpgradeDefs
+    .filter((u) => u.type !== "equipment" && u.type !== "command" && u.type !== "magic")
+    .map((u) => u.pts > 0 ? `${u.name} (+${u.pts}pts)` : u.name);
   const allEquipment = [...baseEquipment, ...upgradeEquipment];
 
   // Collect magic items as equipment strings
@@ -190,6 +194,8 @@ function UnitGameCard({ entry, unitDef, faction, localRulesDesc }) {
     ...commandMagicEquip,
     ...arrowEquip,
   ];
+
+  const displayUpgradeExtras = upgradeExtras;
 
   // Special rules
   const specialRules = unitDef.specialRules || [];
@@ -222,6 +228,15 @@ function UnitGameCard({ entry, unitDef, faction, localRulesDesc }) {
             <div style={gvStyles.equipRow}>
               {displayEquipment.map((eq, i) => (
                 <span key={i} style={gvStyles.equipChip}>{eq}</span>
+              ))}
+            </div>
+          )}
+
+          {/* Purchased upgrades (special rules, kindred, sprites, lore, mount) */}
+          {displayUpgradeExtras.length > 0 && (
+            <div style={{ ...gvStyles.equipRow, marginTop: 4 }}>
+              {displayUpgradeExtras.map((ex, i) => (
+                <span key={i} style={{ ...gvStyles.equipChip, background: "#1a2e1a", borderColor: "#2d4a2d", color: "#86efac" }}>{ex}</span>
               ))}
             </div>
           )}

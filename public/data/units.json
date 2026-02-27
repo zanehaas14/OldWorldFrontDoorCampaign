@@ -503,6 +503,55 @@
           "pts": 0,
           "type": "lore",
           "exclusive": true
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
         }
       ],
       "isNamed": true
@@ -627,6 +676,55 @@
           "name": "A Blight of Terrors",
           "pts": 50,
           "type": "sprites"
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
         }
       ]
     },
@@ -751,6 +849,55 @@
           "name": "A Blight of Terrors",
           "pts": 50,
           "type": "sprites"
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
         }
       ]
     },
@@ -820,6 +967,52 @@
           "pts": 4,
           "type": "equipment",
           "exclusive": true
+        },
+        {
+          "id": "rep_rxbow",
+          "name": "Repeater Crossbow",
+          "pts": 3,
+          "type": "equipment"
+        },
+        {
+          "id": "rep_light_armour",
+          "name": "Light Armour",
+          "pts": 5,
+          "type": "equipment"
+        },
+        {
+          "id": "rep_cloak",
+          "name": "Cloak of Twilight",
+          "pts": 15,
+          "type": "equipment"
+        },
+        {
+          "id": "rep_dark_venom",
+          "name": "Dark Venom",
+          "pts": 15,
+          "type": "special",
+          "description": "Attacks cause -1 Toughness on unsaved wounds (min 1)."
+        },
+        {
+          "id": "rep_manbane",
+          "name": "Manbane",
+          "pts": 10,
+          "type": "special",
+          "description": "Multiple Wounds (2) against non-Large targets."
+        },
+        {
+          "id": "rep_rending_stars",
+          "name": "Rending Stars",
+          "pts": 5,
+          "type": "special",
+          "description": "Missile weapon. Range 12\", S3, AP-1. Up to 2 per Shooting phase."
+        },
+        {
+          "id": "rep_magic_items",
+          "name": "Magic Items",
+          "pts": 0,
+          "type": "magic",
+          "maxPoints": 50
         }
       ]
     },
@@ -916,6 +1109,55 @@
           "name": "Lore of the Wilds",
           "pts": 0,
           "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
           "exclusive": true
         }
       ],
@@ -1254,6 +1496,55 @@
           "pts": 0,
           "type": "lore",
           "exclusive": true
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
         }
       ],
       "notes": "Lores: Battle Magic, Elementalism, Illusion, Lore of the Wilds. Mount: Elven Steed, Warhawk, Great Eagle, Unicorn. Magic Items (100pts)."
@@ -1319,6 +1610,55 @@
           "name": "Lore of the Wilds",
           "pts": 0,
           "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
           "exclusive": true
         }
       ],
@@ -1402,6 +1742,55 @@
           "name": "Lore of the Wilds",
           "pts": 0,
           "type": "lore",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
           "exclusive": true
         }
       ],
@@ -1495,6 +1884,55 @@
           "name": "A Blight of Terrors",
           "pts": 50,
           "type": "sprites"
+        },
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
         }
       ],
       "notes": "May take: AHW, Light Armour. Magic Items (50pts). Enchanted Arrows, Forest Sprites."
@@ -1743,7 +2181,58 @@
         "Martial Prowess",
         "Courage Beyond Compare"
       ],
-      "notes": "Hosts of Talsyn. May be BSB. Magic Items (50pts)."
+      "notes": "Hosts of Talsyn. May be BSB. Magic Items (50pts).",
+      "upgrades": [
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        }
+      ]
     },
     {
       "id": "we_orion",
@@ -1791,7 +2280,58 @@
         "Immune to Psychology",
         "Spectral Hounds"
       ],
-      "notes": "Named. 0-1 per army. 2D6 Hounds of Orion."
+      "notes": "Named. 0-1 per army. 2D6 Hounds of Orion.",
+      "upgrades": [
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        }
+      ]
     },
     {
       "id": "we_araloth",
@@ -1825,7 +2365,58 @@
         "Favour of the Goddess (5+ Ward)",
         "Skaryn the Eye Thief"
       ],
-      "notes": "Named. Hosts of Talsyn. Counts as Glade Lord."
+      "notes": "Named. Hosts of Talsyn. Counts as Glade Lord.",
+      "upgrades": [
+        {
+          "id": "kindred_boar",
+          "name": "Aspect of the Boar",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_cat",
+          "name": "Aspect of the Cat",
+          "pts": 10,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_bear",
+          "name": "Aspect of the Bear",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_hound",
+          "name": "Aspect of the Hound",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_scout",
+          "name": "Scout Kindred",
+          "pts": 15,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_eternal",
+          "name": "Eternal Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        },
+        {
+          "id": "kindred_wild",
+          "name": "Wild Rider Kindred",
+          "pts": 20,
+          "type": "kindred",
+          "exclusive": true
+        }
+      ]
     },
     {
       "id": "de_khainite_assassin",
@@ -2160,14 +2751,16 @@
         }
       ],
       "equipment": [
-        "Hand Weapon",
-        "Light Armour"
+        "Dryad Claws (Hand Weapon, Magical Attacks)"
       ],
       "specialRules": [
-        "Tree Spirit",
-        "Flammable",
-        "Magical Attacks",
-        "Skirmishers"
+        "Tree Spirit: Regeneration (6+), Flammable, Immune to Psychology, Move Through Cover",
+        "Fear",
+        "Open Order",
+        "Skirmishers",
+        "Stubborn",
+        "Armour Bane (1)",
+        "Magical Attacks"
       ],
       "upgrades": [
         {
@@ -2227,7 +2820,12 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Fast Cavalry"
+        "Fast Cavalry",
+        "Swiftstride",
+        "Open Order",
+        "Skirmishers",
+        "Fire & Flee",
+        "Feigned Flight"
       ],
       "upgrades": [
         {
@@ -2586,10 +3184,15 @@
       ],
       "specialRules": [
         "Elven Reflexes",
-        "Talismanic Tattoos (6+ Ward)",
-        "Fast Cavalry",
         "Frenzy",
-        "Furious Charge (+1A on charge)"
+        "Counter Charge",
+        "Fast Cavalry",
+        "Furious Charge: +1 Attack on turn they charge (Wild Riders & Wild Hunter only)",
+        "Fear",
+        "Move Through Cover",
+        "Open Order",
+        "Swiftstride",
+        "Talismanic Tattoos: 6+ Ward Save"
       ],
       "upgrades": [
         {

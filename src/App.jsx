@@ -405,6 +405,42 @@ function parseWeapons(equipment) {
 function ArmyBuilder({ data, onRefreshData }) {
   const { factions, units: baseUnits, items: magicItems, rules: houseRules } = data;
   const [activeFaction, setActiveFaction] = useState("eonir");
+  const [armyItems, setArmyItems] = useState({});
+
+  // Load army-specific magic item lists
+  useEffect(() => {
+    fetch("./data/armyItems.json")
+      .then((r) => r.json())
+      .then(setArmyItems)
+      .catch(() => {}); // silently fail if not found
+  }, []);
+
+  // Build merged magic-items catalog: common items + faction-specific army items
+  // Each slot is deduplicated by item name.
+  const FACTION_ARMY_ITEM_KEYS = {
+    eonir:         ["woodElves", "darkElves", "highElves"],
+    tombKings:     ["tombKings"],
+    lizardmen:     ["lizardmen"],
+    borderPrinces: ["bretonnia", "empire"],
+  };
+  const ITEM_SLOTS = ["weapons", "armour", "talismans", "enchanted", "arcane", "banners"];
+
+  const buildItemsCatalog = (factionKey) => {
+    const catalog = {};
+    ITEM_SLOTS.forEach((slot) => {
+      const common = magicItems[slot] || [];
+      const factionKeys = FACTION_ARMY_ITEM_KEYS[factionKey] || [];
+      const factionSpecific = factionKeys.flatMap((k) => (armyItems[k]?.[slot] || []));
+      const seen = new Set();
+      const merged = [...common, ...factionSpecific].filter((item) => {
+        if (seen.has(item.name)) return false;
+        seen.add(item.name);
+        return true;
+      });
+      catalog[slot] = merged;
+    });
+    return catalog;
+  };
   const [armyLists, setArmyLists] = useState({});
   const [currentListId, setCurrentListId] = useState(null);
   const [customUnitsDB, setCustomUnitsDB] = useState({});
@@ -754,7 +790,7 @@ function ArmyBuilder({ data, onRefreshData }) {
             showNewListDialog={showNewListDialog}
             setShowNewListDialog={setShowNewListDialog}
             notify={notify}
-            magicItems={magicItems}
+            magicItems={buildItemsCatalog(activeFaction)}
             onOpenGameView={() => setShowGameView(true)}
           />
         )}
@@ -773,7 +809,7 @@ function ArmyBuilder({ data, onRefreshData }) {
           />
         )}
         {view === "items" && (
-          <ItemsView allUnits={allUnits} faction={faction} magicItems={magicItems} />
+          <ItemsView allUnits={allUnits} faction={faction} magicItems={buildItemsCatalog(activeFaction)} />
         )}
         {view === "rules" && <RulesView houseRules={allHouseRules} customRules={customRules} saveCustomRules={saveCustomRules} faction={faction} notify={notify} />}
         {view === "map" && <MapView factions={FALLBACK_FACTIONS} />}
